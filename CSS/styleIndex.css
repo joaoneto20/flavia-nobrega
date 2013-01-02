@@ -1,0 +1,10 @@
+/* 
+    Document   : styleIndex
+    Created on : 24/12/2012, 10:47:44
+    Author     : joaoneto20
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+.dialog {visibility: hidden;}
+.dialog div {border: 1px solid #000; width: 300px;}
