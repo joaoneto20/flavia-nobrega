@@ -1,0 +1,147 @@
+body.custom-background {
+	background-attachment: scroll;
+	background-color: #ffffff;
+	background-image: url('../images/background/background5.jpg');
+	background-position: top left;
+	background-repeat: repeat;
+}
+
+
+#footer {
+	background: url('../images/background/floor2.png') repeat transparent !important;
+}
+
+
+.gallery-light-ray {
+	opacity:0.6 !important;
+}
+.home-light {
+        opacity:0.6 !important;
+}
+
+a:hover {
+	color:#3D2200 !important;
+}
+
+.entry-date-wrap a {
+	color:white !important;
+	opacity:1 !important;
+}
+
+a {
+	color:#3D2200;
+}
+
+.label {
+	background-color:#3D2200;
+}
+
+li.current-menu-item a {
+	color:#3D2200 !important;
+}
+
+ul.categories-menu a.cur-category {
+	background:#3D2200 !important;
+}
+
+ul.categories-menu a.cur-category:hover {
+	color:white !important;
+}
+
+.bottom-line {
+	background-color:#3D2200 !important;
+}
+
+.category-shadow {
+	border-color:#3D2200 !important;
+}
+
+#showHideMenu {
+	background-color:#3D2200 !important;
+}
+
+#showHideMenu:hover {
+	color:white !important;
+}
+
+.entry-date-wrap {
+	background-color:#3D2200;
+}
+
+.post:hover .more-link {
+	color:#3D2200;
+}
+
+.btn, .widget_search #searchsubmit, #commentform #submit, .page-pricing-table .btn {
+	background-color:#3D2200 !important;
+}
+
+.btn:hover {
+	background-color:#3D2200;
+	color:white !important;
+}
+
+ul li.active a {
+	background-color:#3D2200 !important;
+}
+
+.toggle-icon-hidden {
+	background-color:#3D2200 !important;
+}
+
+.toggle-icon-visible {
+	background-color:#3D2200 !important;
+}
+
+.dropcap {
+	background-color:#3D2200;
+}
+
+.hightlight_background {
+	background-color:#3D2200;
+}
+
+.hightlight_noBackground {
+	color:#3D2200;
+	border-color:#3D2200;
+}
+
+.nivo-nextNav {
+	background-color:#3D2200 !important;
+}
+
+.nivo-prevNav {
+	background-color:#3D2200 !important;
+}
+
+.pricing-sugested .pricing-name {
+	background-color:#3D2200 !important;
+}
+
+.pricing-sugested {
+	border-color:#3D2200 !important;
+}
+
+.header-logo-link {
+	background-color:#3D2200 !important;
+}
+
+#cboxClose {
+	background-color:#3D2200 !important;
+}
+
+#cboxNext {
+	background-color:#3D2200 !important;
+}
+
+#cboxPrevious {
+	background-color:#3D2200 !important;
+}
+
+.widget_nav_menu a:hover, .widget_categories a:hover {
+	background-color:#3D2200 !important;
+}
+
+.widget_nav_menu .current-menu-item a, .widget_categories .current-cat a {
+	background-color:#3D2200 !important;
+}
