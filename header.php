@@ -1,13 +1,13 @@
 <!doctype html>
-    <html lang="pt-br">
+    <html lang="pt-BR">
         <head>
 <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
 <!--[if IE 9]>    <html class="no-js ie9 oldie" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" dir="ltr" lang="en-US"> <!--<![endif]-->        
+<!--[if gt IE 8]><!--> <html class="no-js" dir="ltr" lang="pt-BR"> <!--<![endif]-->        
         </head>
-        <title>Photoes Theme | A premium gallery theme</title>
+        <title>Flávia Nobrega | Artista Plástica</title>
 
 		<meta charset="UTF-8" />
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -39,8 +39,3 @@
 
 		<div id="ceiling"></div>
 		<!-- the ceiling div - it's resized by js-->
-            
-            
-    
-    
-
