@@ -31,24 +31,7 @@ include 'menuvert.php';
         <div class="entry-content">
             <p>Testando Modal</p><br/>
 
-            <a href="#" onclick="showBox()">Abrir Modal</a>
-            <div id="box">
-                <div>
-
-                    <label>Login</label><br><br>
-                    <form action="login.php" method="POST">
-                        <label>Usuário: </label>
-                        <input type="text" name="nomeUsuario"><br>
-                        <label>Senha: </label>
-                        <input type="password" name="senha"><br>
-                        <input type="submit" value="Logar">
-                    </form>
-
-                    <a href="#" onclick="showBox()">fechar</a>
-
-                </div>
-
-            </div>
+            
 
             <!-- .entry-meta -->
             <footer class="entry-meta"></footer>
