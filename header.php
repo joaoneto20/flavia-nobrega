@@ -1,12 +1,12 @@
 <!doctype html>
-    <html lang="pt-BR">
+    <html lang="pt-BR" class="no-js" dir="ltr">
         <head>
 <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
 <!--[if IE 9]>    <html class="no-js ie9 oldie" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" dir="ltr" lang="pt-BR"> <!--<![endif]-->        
-        </head>
+<!--[if gt IE 8]><!--> <!--<![endif]-->        
+       
         <title>Flávia Nobrega | Artista Plástica</title>
 
 		<meta charset="UTF-8" />
@@ -26,6 +26,7 @@
 
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 		<script type='text/javascript' src='js/site.js'></script>
+                <script type='text/javascript' src='js/modal.js'></script>
 		<script type='text/javascript' src='external/mousewheel/jquery.mousewheel.min.js'></script>
 		<script type='text/javascript' src='external/nivo-slider/jquery.nivo.slider.pack.js'></script>
 		<script type='text/javascript' src='external/jquery.nicescroll.min.js'></script>
@@ -33,6 +34,7 @@
 		<script type='text/javascript' src='external/blur/FastBlur.js'></script>
 		<script type='text/javascript' src='external/reflect/src/reflection.js'></script>
 		<script type='text/javascript' src='external/colorbox/jquery.colorbox-min.js'></script>
+                 </head>
         <body class="page-template-page-home-php custom-background home">
             <div id="vignette"></div>
 		<!-- vignette effect - positioned sized by js-->
