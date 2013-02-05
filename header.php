@@ -34,6 +34,10 @@
 		<script type='text/javascript' src='external/blur/FastBlur.js'></script>
 		<script type='text/javascript' src='external/reflect/src/reflection.js'></script>
 		<script type='text/javascript' src='external/colorbox/jquery.colorbox-min.js'></script>
+                <script type='text/javascript'>
+                   
+                </script>
+                
                  </head>
         <body class="page-template-page-home-php custom-background home">
             <div id="vignette"></div>

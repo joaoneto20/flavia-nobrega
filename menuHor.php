@@ -14,9 +14,10 @@
                 <a href="contato.php">Contato</a>
             </li>
             <li id="box" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2008">
-                <a href="#" onclick="showBox()">Login</a>
+                <a href="#janela1" rel="modal">Login</a>
                 
-                    
+                <div class="window" id="janela1">
+                    <div>
                     <form action="login.php" method="POST">
                         <label>Usuário: </label>
                         <input type="text" name="nomeUsuario"><br>
@@ -24,8 +25,11 @@
                         <input type="password" name="senha"><br><br>
                         <input type="submit" value="Logar">
                     </form>
-                        <a href="#" onclick="showBox()">fechar</a>
-
+                        <a href="#" class="fechar">X Fechar</a>
+                        
+                    </div>
+                </div> 
+                <div id="mascara"></div>
                 
             </li>
         </ul>

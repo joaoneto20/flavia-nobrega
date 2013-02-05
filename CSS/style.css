@@ -3712,3 +3712,26 @@ body .gallery .gallery-caption {
 .wpcf7-form-control {
     padding: 5px 10px;
 }
+
+/* modal */
+.window{
+    display:none;
+    width:250px;
+    height:200px;
+    position:absolute;   
+    background: #3D2200;
+    z-index:9900;
+    padding:10px;
+    border-radius:10px;
+}
+ 
+#mascara{
+    display:none;
+    position:absolute;
+    left:0;
+    top:0;
+    z-index:9000;
+    background-color:#000;
+}
+ 
+.fechar{display:block; text-align:right; color: white;}
