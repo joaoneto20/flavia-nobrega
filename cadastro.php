@@ -5,6 +5,13 @@ include 'menuVert.php';
 ?>
 <!--[if !IE]>
 <!-->
+<script type="text/javascript" src="js/jquery-1.2.6.pack.js"></script>
+<script type="text/javascript" src="js/jquery.maskedinput-1.1.4.pack.js"/></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#cpf").mask("999.999.999-99");
+});
+</script>
 <div id="loadingScreen">
     <!-- if not IE, we show the loading screen -->
     <div>
@@ -39,10 +46,6 @@ include 'menuVert.php';
 								<dd>(83)3365.2014</dd>
 								<dt>E-mail:</dt>
 								<dd>contact@tagdiv.com</dd>
-								<dd>
-									<a href="#">www.tagdiv.com</a>
-								</dd>
-								<dd>&#038;nbsp</dd>
 								<dt>Seg-Sex:</dt>
 								<dd>09:00 &#8211; 18:00</dd>
 								<dt>Sab:</dt>
@@ -63,17 +66,17 @@ include 'menuVert.php';
 								<form action="" method="post" class="wpcf7-form">
 									<p>
 										<span class="wpcf7-form-control-wrap Name">
-											<input type="text" name="Name" value="" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-use-title-as-watermark watermark" size="40" title="Name" placeholder="Nome:">
+											<input type="text" name="Nome" value="" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-use-title-as-watermark watermark" size="40" title="Nome" placeholder="Nome:">
 										</span>
 									</p>
 									<p>
 										<span class="wpcf7-form-control-wrap Email">
-											<input type="text" name="Email" value="" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-use-title-as-watermark watermark" size="40" title="Email" placeholder="E-mail">
+											<input type="text" name="Email" value="" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-use-title-as-watermark watermark" size="40" title="Email" placeholder="E-mail:">
 										</span>
 									</p>
 									<p>
 										<span class="wpcf7-form-control-wrap Company">
-											<input type="text" name="Company" value="" class="wpcf7-form-control wpcf7-text wpcf7-use-title-as-watermark watermark" size="40" title="Company" placeholder="CPF">
+											<input type="text" name="CPF" id="cpf" value="" class="wpcf7-form-control wpcf7-text wpcf7-use-title-as-watermark watermark" size="40" title="CPF" placeholder="CPF:">
 										</span>
 									</p>
                                                                         <p>

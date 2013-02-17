@@ -44,10 +44,6 @@ include 'menuvert.php';
 								<dd>(552) 365.2014</dd>
 								<dt>E-mail:</dt>
 								<dd>contact@tagdiv.com</dd>
-								<dd>
-									<a href="#">www.tagdiv.com</a>
-								</dd>
-								<dd>&#038;nbsp</dd>
 								<dt>Seg-Sex:</dt>
 								<dd>09:00 &#8211; 18:00</dd>
 								<dt>Sab:</dt>
