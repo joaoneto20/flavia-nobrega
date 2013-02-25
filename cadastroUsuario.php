@@ -1,7 +1,5 @@
 <?php
 include ('conexao.php');
-
-
 $nome            = $_POST["nome"];
 $nomeUsuario     = $_POST["nomeUsuario"];
 $email           = $_POST["email"];
@@ -31,7 +29,8 @@ alert('Cadastro realizado com sucesso.');
 
 require 'config.php';
 sendMail('Teste envio de e-mail no cadastro',
-        "AGORA INFORMANDO O USUÁRIO E SENHA AUTOMATICAMENTE!!<br><br>Cadastro Realizado com sucesso.Segue abaixo seu usuário e senha.<br><br>Usuario: $nomeUsuario <br> Senha: $senha<br>",
+        "AGORA INFORMANDO O USUÁRIO E SENHA AUTOMATICAMENTE!!<br><br>Cadastro Realizado com sucesso.
+            Segue abaixo seu usuário e senha.<br><br>Usuario: $nomeUsuario <br> Senha: $senha<br>",
         'joaoneto20@gmail.com','João Neto',$email,$nome);
 
 ?>
