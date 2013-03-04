@@ -15,6 +15,7 @@
 <br>
 <p>você é administrador(a) deste site!</p>
 <br>
+<a href="cadastraVideo.php">Cadastrar Video</a><br>
 <a href="#" onclick="showBox()">Clique aqui</a> para cadastrar um usuário.
 <div id="box" class="dialog">
 		<div>
