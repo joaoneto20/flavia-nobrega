@@ -1,7 +1,7 @@
 <?php
 include 'header.php';
 include 'menuHor.php';
-include 'menuvert.php';
+include 'menuVert.php';
 ?>
 		<!--[if !IE]>
 		<!-->

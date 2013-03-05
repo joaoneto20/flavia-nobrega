@@ -20,8 +20,8 @@
 		<link rel='stylesheet' id='google-font-css'  href='http://fonts.googleapis.com/css?family=Open+Sans%3A300%2C400%2C600%2C700&#038;subset=latin&#038;ver=3.4.2' type='text/css' media='all' />
 		<link rel='stylesheet' id='google-font-2-css'  href='http://fonts.googleapis.com/css?family=Dancing+Script&#038;ver=3.4.2' type='text/css' media='all' />
 		<link rel='stylesheet' id='bootstrap-css'  href='external/bootstrap/css/bootstrap.css' type='text/css' media='all' />
-		<link rel='stylesheet' id='theme-css'  href='css/style.css' type='text/css' media='all' />
-		<link rel='stylesheet' id='theme-css-custom'  href='css/color-theme.css' type='text/css' media='all' />
+		<link rel='stylesheet' id='theme-css'  href='CSS/style.css' type='text/css' media='all' />
+		<link rel='stylesheet' id='theme-css-custom'  href='CSS/color-theme.css' type='text/css' media='all' />
 		<link rel='stylesheet' id='nivo-slider-css'  href='external/nivo-slider/nivo-slider.css' type='text/css' media='all' />
 
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
