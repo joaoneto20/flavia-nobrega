@@ -1,14 +1,14 @@
 body.custom-background {
 	background-attachment: scroll;
 	background-color: #ffffff;
-	background-image: url('../images/background/background5.jpg');
+	background-image: url('../images/background/background8.jpg');
 	background-position: top left;
 	background-repeat: repeat;
 }
 
 
 #footer {
-	background: url('../images/background/floor2.png') repeat transparent !important;
+	background: url('../images/background/floor.png') repeat transparent !important;
 }
 
 
