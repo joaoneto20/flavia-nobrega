@@ -7,7 +7,7 @@
         <script type="text/javascript" src="js/modal.js"></script>
     </head>
     <body>
-       <?php include 'confirmacaoAdmin.php';
+       <?php //include 'confirmacaoAdmin.php';
        //include 'header.php'; ?>
 
 <h1>Página restrita</h1>
@@ -31,7 +31,7 @@
 		
 		$imagem = $_FILES['imagem'];
 		$destino = $imagem['tmp_name'];
-		$nome = $imagem['name'];
+		$nome = $imagem[md5(uniqid(rand(),true))];
 		$tipo = $imagem['type'];
 		
 		require('uploadImagem.php');
