@@ -15,8 +15,13 @@
 <br>
 <p>você é administrador(a) deste site!</p>
 <br>
+<<<<<<< HEAD
 <a href="cadastraImagem.php">Cadastrar Imagem</a><br>
 <a href="cadastraVideo.php">Cadastrar Video</a><br>
+=======
+<a href="cadastraVideo.php">Cadastrar Vídeo</a><br>
+<a href="listarVideos.php">Lista de Vídeo</a><br>
+>>>>>>> Cadastro e exibição de video
 <a href="#" onclick="showBox()">Clique aqui</a> para cadastrar um usuário.
 <div id="box" class="dialog">
 		<div>

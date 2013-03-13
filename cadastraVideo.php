@@ -17,25 +17,61 @@
 <h3>Cadastro de vídeos.</h3>
 <br>
 
-<form method="POST" action="" enctype="multipart/form-data">
-    Arquivo:<br>
-    <input type="file" name="arq">
-    <br>
-    <input type="submit" value="Enviar" name="send"/>
-    
-</form>
-
 <?php
-    ini_set('upload_max_filesize', '8M');
-    
+    require 'conexao.php';
+        
     if (isset($_POST['send'])){//verifica se o botão foi setado
-    $arq = $_FILES['arq'];//arq é o nome do input file
-    ini_set('upload_max_filesize', '8M');
-    set_time_limit(0);
+    $titulo = HTMLSPECIALCHARS(mysql_real_escape_string($_POST["titulo"]));
+    $endereco = HTMLSPECIALCHARS(mysql_real_escape_string($_POST["endereco"]));
+    $descricao = HTMLSPECIALCHARS(mysql_real_escape_string(nl2br($_POST["descricao"])));
     
-    echo '<pre';    print_r($arq);    echo '</pre>';
+    $sql = "INSERT INTO video(titulo, endereco, descricao) VALUES ('$titulo','$endereco','$descricao')";
+    
+    $query = mysql_query($sql) or die (mysql_error());
+	
+	
+   echo  "<script type='text/javascript'> 
+    alert('Cadastro realizado com sucesso.'); 
+    </script>";
 }
 
 ?>
 
-<a href="info.php">php ini</a>
+<form method="POST" action="#">
+    <span>Título:</span>
+    <br>
+    <input type="text" name="titulo">
+    <br>
+    <span>Link do vídeo:</span>
+    <br>
+    <input type="text" name="endereco">
+    <br>
+    <span>Descrição:</span>
+    <br>
+    <textarea name="descricao" cols="25" rows="5">
+    Enter your comments here...
+    </textarea><br>
+    <br>
+    <input type="submit" value="Cadastrar" name="send"/>
+    
+</form>
+
+<?php
+    require 'conexao.php';
+        
+    if (isset($_POST['send'])){//verifica se o botão foi setado
+    $titulo = HTMLSPECIALCHARS(mysql_real_escape_string($_POST['titulo']));
+    $endereco = HTMLSPECIALCHARS(mysql_real_escape_string($_POST['endereco']));
+    $descricao = HTMLSPECIALCHARS(mysql_real_escape_string(nl2br($_POST['descricao'])));
+    
+    $sql = "INSERT INTO video('titulo','endereco','descricao') VALUES ('$titulo','$endereco','$descricao')";
+    
+    $query = mysql_query($sql) or die (mysql_error());
+	
+	
+   echo  "<script type='text/javascript'> 
+    alert('Cadastro realizado com sucesso.'); 
+    </script>";
+}
+
+?>
