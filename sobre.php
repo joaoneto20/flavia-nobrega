@@ -34,7 +34,7 @@ include 'menuVert.php';
             </p>
             <p>
                 Sempre gostei de artes e em 2000 comecei a fazer curso de modelagem em porcelana fria. Seis meses depois já estava
-                publicando meus trabalhos em revistas da Editora Online e depois pela Editora Miruano. Em 2004 surgiu a revista de personagens 
+                publicando meus trabalhos em revistas da Editora Online e depois pela Editora Minuano. Em 2004 surgiu a revista de personagens 
                 infantis, onde publiquei peças com exclusividade até o ano de 2009 quando parei para me dedicar a curso de escultura.
                 Estou sempre estudando, buscando me aperfeiçoar e levar a minha arte adiante dando aulas em vários estados do Brasil e também recebo 
                 em minha cidade alunos de várias cidades de dentro e foras do país.
