@@ -1,21 +1,7 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Artista Plastico</title>
-        <link type="text/css" rel="stylesheet" href="CSS/styleIndex.css">
-        <script type="text/javascript" src="js/modal.js"></script>
-    </head>
-    <body>
-       <?php include 'confirmacaoAdmin.php';
-        //include 'header.php'; ?>
-
-<h1>Página restrita</h1>
-<p>Olá, <?php include 'mostraLogado.php';?>!</p>
-<br>
-<p>você é administrador(a) deste site!</p>
-<h3>Cadastro de vídeos.</h3>
-<br>
+<?php
+require 'headerAdm.php';
+require 'menuAdm.php';
+?>
 
 <?php
     require 'conexao.php';
@@ -36,23 +22,26 @@
 }
 
 ?>
-
+<hr>
+<div class="container">
+    <div class="row">
+        <div class="span9">
+            <div class="hero-unit">
+                <h2>Adicionar Imagem</h2>
 <form method="POST" action="#">
     <span>Título:</span>
     <br>
-    <input type="text" name="titulo">
+    <input class="input-large" type="text" name="titulo" placeholder="Digite um Titulo">
     <br>
     <span>Link do vídeo:</span>
     <br>
-    <input type="text" name="endereco">
+    <input class="input-large" type="text" name="endereco" placeholder="Cole o link do vídeo">
     <br>
     <span>Descrição:</span>
     <br>
-    <textarea name="descricao" cols="25" rows="5">
-    Enter your comments here...
-    </textarea><br>
+    <textarea name="descricao" cols="25" rows="5" placeholder="Digite Uma descrição"></textarea><br>
     <br>
-    <input type="submit" value="Cadastrar" name="send"/>
+    <input  class="btn btn-primary" type="submit" value="Cadastrar" name="send"/>
     
 </form>
 
@@ -73,5 +62,11 @@
     alert('Cadastro realizado com sucesso.'); 
     </script>";
 }
-
+?>
+            </div>
+        </div>
+    </div>
+</div>
+<?php
+require 'footerAdm.php';
 ?>

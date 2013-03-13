@@ -1,21 +1,13 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Artista Plastico</title>
-        <link type="text/css" rel="stylesheet" href="CSS/styleIndex.css">
-        <script type="text/javascript" src="js/modal.js"></script>
-    </head>
-    <body>
-       <?php //include 'confirmacaoAdmin.php';
-       //include 'header.php'; ?>
-
-<h1>Página restrita</h1>
-<p>Olá, <?php include 'mostraLogado.php';?>!</p>
-<br>
-<p>você é administrador(a) deste site!</p>
-<h3>Adicionar Imagem.</h3>
-<br>
+<?php
+require 'headerAdm.php';
+require 'menuAdm.php';
+?>
+<hr>
+<div class="container">
+    <div class="row">
+        <div class="span9">
+            <div class="hero-unit">
+<h2>Adicionar Imagem</h2>
 
 <form method="POST" action="" enctype="multipart/form-data">
     Arquivo:<br>
@@ -25,24 +17,34 @@
 </form>
 
 <?php
+require 'conexao.php';
+
 	if(isset($_POST['enviei'])){
 		$pasta = 'imagem-fotos';
 		$permite = array('image/jpg','image/jpeg','image/pjpeg');
 		
 		$imagem = $_FILES['imagem'];
 		$destino = $imagem['tmp_name'];
-		$nome = $imagem[md5(uniqid(rand(),true))];
+		$nome = md5($imagem['name']);
 		$tipo = $imagem['type'];
 		
 		require('uploadImagem.php');
 		
 		if(!empty($nome) && in_array($tipo, $permite)){
-			upload($destino, $nome, 460, $pasta);
+			upload($destino, $nome, 620, $pasta);
+                        $sql = "INSERT INTO imagem(nome) VALUES ('$nome')";
+    
+                        $query = mysql_query($sql) or die (mysql_error());
                         echo '<script>alert("Enviado com sucesso!");</script>';
 		}else{
 			echo "Aceitamos apensa imagens no formato JPEG";
 		}
 	}
 ?>
-
-<a href="info.php">php ini</a>
+            </div>
+        </div>
+    </div>
+</div>
+<?php
+require 'footerAdm.php';
+?>

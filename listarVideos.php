@@ -1,20 +1,8 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Artista Plastico</title>
-        <link type="text/css" rel="stylesheet" href="CSS/styleIndex.css">
-        <script type="text/javascript" src="js/modal.js"></script>
-    </head>
-    <body>
-       <?php include 'confirmacaoAdmin.php';
-        //include 'header.php'; ?>
-
-<h1>Página restrita</h1>
-<p>Olá, <?php include 'mostraLogado.php';?>!</p>
-<br>
-<p>você é administrador(a) deste site!</p>
-<br>
+<?php
+require 'headerAdm.php';
+require 'menuAdm.php';
+?>
+<hr>
 <h3>Relação de vídeos Cadastrados</h3>
 
 <?php
@@ -38,4 +26,7 @@ if(mysql_num_rows($exequery)<=0){
         }
 }
 
+?>
+<?php
+require 'footerAdm.php';
 ?>
