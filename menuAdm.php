@@ -1,6 +1,6 @@
         <div class="navbar">
             <div class="navbar-inner">
-                <div class="container-fluid">
+                <div class="container">
                     <button type="button" class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -8,7 +8,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="brand" href="indexAdmin.php">Área Administrativa</a>
+                    <a class="brand" href="indexAdmin.php">Painel Adm</a>
                     
                     <div class="nav-collapse collapse" style="height: 0px;">
                     <p class="navbar-text pull-right">
@@ -17,10 +17,11 @@
                     
                     <ul class="nav">
                         <li><a href="cadastraImagem.php"><i class="icon-picture"></i> Cadastrar Imagem</a></li>
+                        <li><a href="listarImagem.php"><i class="icon-th-list"></i> Listar Imagem</a></li>
                         <li><a href="cadastraVideo.php"><i class="icon-facetime-video"></i> Cadastrar Vídeo</a></li>
                         <li><a href="listarVideos.php"><i class="icon-th-list"></i> Lista de Vídeo</a></li>
                         <li><a href="#" onclick="showBox()" ><i class="icon-user"></i> Cadastrar Usuário</a></li>
-                        <li><a href="#"><i class="icon-off"></i> Sair</a></li>
+                        <li><a href="logout.php"><i class="icon-off"></i> Sair</a></li>
                     </ul>
                     
                     </div>

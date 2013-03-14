@@ -3,7 +3,10 @@ require 'headerAdm.php';
 require 'menuAdm.php';
 ?>
 <hr>
-<h3>Relação de vídeos Cadastrados</h3>
+<div class="container">
+    <div class="row">
+        <div class="span9">
+<h3>Relação de Vídeos Cadastrados</h3>
 
 <?php
 require 'conexao.php';
@@ -19,14 +22,21 @@ if(mysql_num_rows($exequery)<=0){
 }else{
     
     while ($res = mysql_fetch_assoc($exequery)){
-       
-        echo '<a href="exibirVideos.php?id='.$res['id'].'">'.$res['titulo'].'</a> ';
-        echo '<a href="#">editar</a> ';
-        echo '<a href="#">excluir</a><br>';
+        echo '<table class="table">';
+        echo '<tbody>';
+        echo '<tr>';
+        echo '<td><a href="exibirVideos.php?id='.$res['id'].'">'.$res['titulo'].'</a></td>';
+        echo '<td><a href="#">Editar</a></td>';
+        echo '<td><a href="#">Excluir</a><br></td>';
+        echo '</tr>';
+        echo '</tbody>';
+        echo '</table>';
         }
 }
-
 ?>
+        </div>
+    </div>
+</div>
 <?php
 require 'footerAdm.php';
 ?>
