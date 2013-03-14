@@ -29,7 +29,7 @@ require 'menuAdm.php';
                             echo '<td><a href="#?id=' . $res['id'] . '">' . $res['nome'] . '</a></td>';
                             echo '<td>' . $res['nomeUsuario'] . '</td>';
                             echo '<td>' . $res['email'] . '</td>';
-                            echo '<td><a href="#">Editar</a></td>';
+                            echo '<td><a href="editarUsuario.php?id=' . $res['id'] . '">Editar</a></td>';
                             echo '<td><a href="#">Excluir</a><br></td>';
                             echo '</tr>';
                         }
