@@ -8,20 +8,42 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="brand" href="indexAdmin.php">Painel Adm</a>
-                    
+                    <a class="brand" href="#">Painel Administrativo</a>
                     <div class="nav-collapse collapse" style="height: 0px;">
                     <p class="navbar-text pull-right">
                         Bem vindo, <?php include 'mostraLogado.php'; ?>!
                     </p>
                     
                     <ul class="nav">
-                        <li><a href="cadastraImagem.php"><i class="icon-picture"></i> Cadastrar Imagem</a></li>
-                        <li><a href="listarImagem.php"><i class="icon-th-list"></i> Listar Imagem</a></li>
-                        <li><a href="cadastraVideo.php"><i class="icon-facetime-video"></i> Cadastrar Vídeo</a></li>
-                        <li><a href="listarVideos.php"><i class="icon-th-list"></i> Lista de Vídeo</a></li>
-                        <li><a href="#" onclick="showBox()" ><i class="icon-user"></i> Cadastrar Usuário</a></li>
+                        <li class="divider-vertical"></li>
+                        <li><a href="indexAdmin.php"><i class="icon-home"></i> Início</a></li>
+                        <li class="divider-vertical"></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Imagem <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                            <li><a href="cadastraImagem.php"><i class="icon-picture"></i> Cadastrar Imagem</a></li>
+                            <li><a href="listarImagem.php"><i class="icon-th-list"></i> Listar Imagem</a></li>
+                            </ul>
+                        </li>
+                        <li class="divider-vertical"></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Vídeo <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                            <li><a href="cadastraVideo.php"><i class="icon-facetime-video"></i> Cadastrar Vídeo</a></li>
+                            <li><a href="listarVideos.php"><i class="icon-th-list"></i> Lista de Vídeo</a></li>
+                            </ul>
+                        </li>
+                        <li class="divider-vertical"></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Usuário <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                            <li><a href="cadastraUsuario.php"><i class="icon-user"></i> Cadastrar Usuário</a></li>
+                            <li><a href="listarUsuario.php"><i class="icon-th-list"></i> Listar Usuário</a></li>
+                            </ul>
+                        </li>
+                        <li class="divider-vertical"></li>
                         <li><a href="logout.php"><i class="icon-off"></i> Sair</a></li>
+                        <li class="divider-vertical"></li>
                     </ul>
                     
                     </div>

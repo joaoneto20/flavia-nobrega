@@ -25,24 +25,16 @@ require 'menuAdm.php';
 <hr>
 <div class="container">
     <div class="row">
-        <div class="span9">
-            <div class="hero-unit">
-                <h2>Adicionar Imagem</h2>
+            <div class="well" style="max-width: 280px; margin: auto; ">                
+                <h2>Adicionar Vídeo</h2>
 <form method="POST" action="#">
-    <span>Título:</span>
-    <br>
+    <label>Título:</label>
     <input class="input-large" type="text" name="titulo" placeholder="Digite um Titulo">
-    <br>
-    <span>Link do vídeo:</span>
-    <br>
+    <label>Link do vídeo:</label>
     <input class="input-large" type="text" name="endereco" placeholder="Cole o link do vídeo">
-    <br>
-    <span>Descrição:</span>
-    <br>
-    <textarea name="descricao" cols="25" rows="5" placeholder="Digite Uma descrição"></textarea><br>
-    <br>
+    <label>Descrição:</label>
+    <textarea name="descricao" cols="100" rows="5" placeholder="Digite Uma descrição"></textarea><br>
     <input  class="btn btn-primary" type="submit" value="Cadastrar" name="send"/>
-    
 </form>
 
 <?php
@@ -64,7 +56,6 @@ require 'menuAdm.php';
 }
 ?>
             </div>
-        </div>
     </div>
 </div>
 <?php

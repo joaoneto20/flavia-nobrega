@@ -7,9 +7,9 @@
         <link type="text/css" rel="stylesheet" href="CSS/bootstrap.min.css">
         <link type="text/css" rel="stylesheet" href="CSS/bootstrap.responsive.min.css">
         <link type="text/css" rel="stylesheet" href="CSS/styleIndex.css">
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
         <script type="text/javascript" src="js/modal.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
     </head>
     <body>
         <?php include 'confirmacaoAdmin.php';?>

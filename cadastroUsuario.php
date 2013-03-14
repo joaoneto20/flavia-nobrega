@@ -3,7 +3,7 @@ include ('conexao.php');
 $nome            = $_POST["nome"];
 $nomeUsuario     = $_POST["nomeUsuario"];
 $email           = $_POST["email"];
-$senha           = $_POST["senha"];
+$senha           = md5($_POST["senha"]);
 
 if (strstr($email, '@') != true)
 {
@@ -16,15 +16,8 @@ else {
 		   VALUES ('$nome', '$nomeUsuario', '$email', '$senha')"; 
 
 	$query = mysql_query($sql) or die (mysql_error());
-	
-	
-   echo  "<script type='text/javascript'> 
-alert('Cadastro realizado com sucesso.'); 
-</script>"; 
-   
-   header('Location: indexAdmin.php');
-       
-
+        echo '<script>alert("Cadastrado com sucesso!");</script>';    
+        header('Location: indexAdmin.php');
 }
 
 require 'config.php';
