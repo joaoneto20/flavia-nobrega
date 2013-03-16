@@ -3,11 +3,10 @@ require 'headerAdm.php';
 require 'menuAdm.php';
 ?>
 <hr>
-<div class="container">
-    <div class="row">
-        <div class="span9" style="margin-left: 10%;">
-            <h3>Relação de Vídeos Cadastrados</h3>
-            <table class="table table-hover">
+<div class="container-fluid">
+    <div class="row-fluid">
+            <h3 style="text-align: center;">Relação de Vídeos Cadastrados</h3>
+            <table class="table table-hover" style="max-width: 500px; margin-left: 30%;">
                 <tbody>
                     <?php
                     require 'conexao.php';
@@ -25,17 +24,15 @@ require 'menuAdm.php';
                         while ($res = mysql_fetch_assoc($exequery)) {
                             echo '<tr>';
                             echo '<td><a href="exibirVideos.php?id=' . $res['id'] . '">' . $res['titulo'] . '</a></td>';
-                            echo '<td><a href="#">Editar</a></td>';
-                            echo '<td><a href="#">Excluir</a><br></td>';
+                            echo '<td><a class ="btn btn-success" href="#">Editar</a></td>';
+                            echo '<td><a class ="btn btn-danger" href="#">Excluir</a><br></td>';
                             echo '</tr>';
-                            echo '</tbody>';
-                            echo '</table>';
+
                         }
                     }
                     ?>
                 </tbody>
             </table>
-        </div>
     </div>
 </div>
 <?php

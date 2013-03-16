@@ -3,7 +3,7 @@ require 'headerAdm.php';
 require 'menuAdm.php';
 ?>
 <hr>
-<div class="container">
+<div class="container-fluid">
     <div class="well" style="max-width: 400px; margin: auto; ">
         <h2>Adicionar Imagem</h2>
 

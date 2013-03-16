@@ -3,8 +3,8 @@ require 'headerAdm.php';
 require 'menuAdm.php';
 ?>
 <hr>
-<div class="container">
-    <div class="row">
+<div class="container-fluid">
+    <div class="row-fluid">
             <div class="well" style="max-width: 300px; margin: auto; ">                
                 <h2>Adicionar Usuários</h2>
                 

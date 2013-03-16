@@ -4,8 +4,8 @@ require 'menuAdm.php';
 require 'conexao.php';
 ?>
 <hr>
-<div class="container">
-    <div class="row">
+<div class="container-fluid">
+    <div class="row-fluid">
             <div class="well" style="max-width: 300px; margin: auto; ">                
                 <h2>Edição de Usuários</h2>
 
@@ -33,7 +33,7 @@ require 'conexao.php';
                             <input type="text" name="nomeUsuario" value="' . $res['nomeUsuario'] . '"><br>
                             <label>E-Mail: </label>
                              <input type="text" name="email" value="' . $res['email'] . '"><br>
-                            <input class="btn btn-primary" type="submit" name="enviar" value="Cadastrar"><br>
+                            <input class="btn btn-success" type="submit" name="enviar" value="Editar"><br>
                             </form>
                             ';
                             

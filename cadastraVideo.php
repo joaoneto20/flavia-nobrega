@@ -23,8 +23,8 @@ require 'menuAdm.php';
 
 ?>
 <hr>
-<div class="container">
-    <div class="row">
+<div class="container-fluid">
+    <div class="row-fluid">
             <div class="well" style="max-width: 280px; margin: auto; ">                
                 <h2>Adicionar Vídeo</h2>
 <form method="POST" action="#">

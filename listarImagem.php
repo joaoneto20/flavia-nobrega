@@ -3,12 +3,11 @@ require 'headerAdm.php';
 require 'menuAdm.php';
 ?>
 <hr>
-<div class="container">
-    <div class="row">
-        <div class="span9" style="margin-left: 10%;">
+<div class="container-fluid">
+    <div class="row-fluid">
 
-            <h3>Relação de Imagens cadastradas</h3>
-            <table class="table table-hover">
+            <h3 style="text-align: center;">Relação de Imagens cadastradas</h3>
+            <table class="table table-hover" style="max-width: 500px; margin-left: 30%;">
                 <tbody>
                     <?php
                     require 'conexao.php';
@@ -27,8 +26,8 @@ require 'menuAdm.php';
 
                             echo '<tr>';
                             echo '<td><a href="#?id=' . $res['id'] . '">' . $res['nome'] . '</a></td>';
-                            echo '<td><a href="#">Editar</a></td>';
-                            echo '<td><a href="#">Excluir</a><br></td>';
+                            echo '<td><a class ="btn btn-success" href="#">Editar</a></td>';
+                            echo '<td><a class ="btn btn-danger" href="#">Excluir</a><br></td>';
                             echo '</tr>';
                         }
                     }
@@ -36,7 +35,6 @@ require 'menuAdm.php';
                 </tbody>
             </table>
         </div>
-    </div>
 </div>
 <?php
 require 'footerAdm.php';
