@@ -1,12 +1,12 @@
 <?php
-require 'headerAdm.php';
-require 'menuAdm.php';
+require 'headerUsuario.php';
+require 'menuUsuario.php';
 ?>
 <hr>
 <div class="container-fluid">
     <div class="row-fluid">
             <h3 style="text-align: center;">Relação de Vídeos Cadastrado</h3>
-            <table class="table table-hover" style="max-width: 500px; margin-left: 30%;">
+            <table class="table table-hover" style="max-width: 800px; margin-left: 20%;">
                 <tbody>
                     <?php
                     require 'conexao.php';
@@ -23,9 +23,7 @@ require 'menuAdm.php';
 
                         while ($res = mysql_fetch_assoc($exequery)) {
                             echo '<tr>';
-                            echo '<td><a href="exibirVideos.php?id=' . $res['id'] . '">' . $res['titulo'] . '</a></td>';
-                            echo '<td><a class ="btn btn-success" href="editarVideo.php?id=' . $res['id'] . '">Editar</a></td>';
-                            echo '<td><a class ="btn btn-danger" href="#">Excluir</a><br></td>';
+                            echo '<td style="text-align:center;"><a href="verVideo.php?id=' . $res['id'] . '">' . $res['titulo'] . '</a></td>';
                             echo '</tr>';
 
                         }
@@ -36,5 +34,5 @@ require 'menuAdm.php';
     </div>
 </div>
 <?php
-require 'footerAdm.php';
+require 'footerUsuario.php.php';
 ?>

@@ -1,6 +1,6 @@
 <?php
-require 'headerAdm.php';
-require 'menuAdm.php';
+require 'headerUsuario.php';
+require 'menuUsuario.php';
 ?>
 <?php include 'conexao.php'; ?>
 <hr>
@@ -23,7 +23,7 @@ require 'menuAdm.php';
                 echo '<br>';
                 echo $res['endereco'];
                 echo '</div>';
-                echo '<a href="listarVideos.php" class="btn btn-info" style="text-align: center;">Voltar</a>';
+                echo '<a href="listarVideoUsuario.php" class="btn btn-info" style="text-align: center;">Voltar</a>';
                 //echo '<iframe width="425" height="350" src="http://www.youtube.com/embed/' . $res['endereco'] . '" frameborder="0" allowfullscreen></iframe>';
                 ?>
             </h3>
@@ -31,5 +31,5 @@ require 'menuAdm.php';
     </div>
 </div>
 <?php
-require 'footerAdm.php';
+require 'footerUsuario.php';
 ?>

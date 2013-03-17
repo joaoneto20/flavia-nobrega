@@ -6,9 +6,9 @@ require 'menuAdm.php';
 <div class="container-fluid">
     <div class="row-fluid">
 
-            <h3 style="text-align: center;">Relação de usuários cadastrados</h3>
+            <h3 style="text-align: center;">Relação de usuários cadastrado</h3>
             
-            <table class="table table-hover" style="max-width: 500px; margin-left: 30%;">
+            <table class="table table-hover" style="max-width: 800px; margin-left: 20%;">
                 <tbody>
 
                     <?php

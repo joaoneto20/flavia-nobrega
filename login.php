@@ -2,7 +2,7 @@
             require_once 'conexao.php';
 
             $nomeUsuario = $_POST["nomeUsuario"];
-            $senha = $_POST["senha"];
+            $senha = md5($_POST["senha"]);
 
             $sql = ("select * from pessoa where nomeUsuario = '$nomeUsuario' and senha = '$senha'");
 
