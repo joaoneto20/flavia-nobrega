@@ -34,25 +34,13 @@ include 'menuVert.php';
                 <img class="slider-mask" src="images/gallery/shadow-homepage.png" alt=""/>
                 <div id="50a20f9942d18" class="nivoSlider">
                     <a href="#">
-                        <img src="images/fotos/foto1.jpg" alt=""  title="Commercial photography"/>
+                        <img src="images/gallery_images/cat_art1.jpg" alt=""  title="Commercial photography"/>
                     </a>
                     <a href="gallery_art.html">
-                        <img src="images/fotos/foto2.jpg" alt=""  title="Art gallery"/>
+                        <img src="images/gallery_images/cat_commercial1.jpg" alt=""  title="Art gallery"/>
                     </a>
                     <a href="gallery_architecture.html">
-                        <img src="images/fotos/foto3.jpg" alt=""  title="Architecture photography"/>
-                    </a>
-                    <a href="gallery_fashion.html">
-                        <img src="images/fotos/foto4.jpg" alt=""  title="Fashion photography"/>
-                    </a>
-                    <a href="gallery_still-life.html">
-                        <img src="images/fotos/foto5.jpg" alt=""  title="Still Life/Studio photography"/>
-                    </a>
-                    <a href="gallery_travel.html">
-                        <img src="images/fotos/foto6.jpg" alt=""  title="Travel photography"/>
-                    </a>
-                    <a href="gallery_weddings.html">
-                        <img src="images/fotos/foto7.jpg" alt=""  title="Wedding photography"/>
+                        <img src="images/gallery_images/cat_travel1.jpg" alt=""  title="Architecture photography"/>
                     </a>
                 </div>
             </div>

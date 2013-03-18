@@ -14,22 +14,12 @@
             </li>
             <li>
                 <span class="category-shadow">
-                    <a href="#">Fotos</a>
-                </span>
-            </li>
-            <li>
-                <span class="category-shadow">
                     <a href="cadastro.php">Cadastro</a>
                 </span>
             </li>
             <li>
                 <span class="category-shadow">
-                    <a href="paineladm.php">Painel do usuário</a>
-                </span>
-            </li>
-            <li>
-                <span class="category-shadow">
-                    <a href="gallery_video.html">Galeria de Vídeo</a>
+                    <a href="#">Galeria de Vídeo</a>
                 </span>
             </li>
         </ul>

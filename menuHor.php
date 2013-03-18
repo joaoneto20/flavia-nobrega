@@ -2,7 +2,7 @@
     <!-- the menu -->
     <div class="main-menu">
         <a class="header-logo-link" href="index.php">
-            <img src="images/header/logo.png" alt=""/>
+            <img src="images/header/logo1.png" alt="Flávia Nobrega"/>
         </a><ul id="menu-header" class="js-jquery-dropdown">
             <li id="menu-item-2010" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-57 menu-item-2010">
                 <a href="index.php">Home</a>
@@ -19,9 +19,9 @@
                 <div class="window" id="janela1">
                     <div>
                     <form action="login.php" method="POST">
-                        <label>Usuário: </label>
+                        <label style="color: black;">Usuário: </label>
                         <input type="text" name="nomeUsuario"><br>
-                        <label>Senha: </label>
+                        <label style="color: black">Senha: </label>
                         <input type="password" name="senha"><br><br>
                         <input type="submit" value="Logar">
                     </form>

@@ -36,21 +36,14 @@ include 'menuVert.php';
 				<div class="row ">
 					<div class="span4 ">
 						<div class="span-space" >
-							<h3>Informação de Contato</h3>
-							<dl class="dl-horizontal">
-								<dt>Rua:</dt>
-								<dd>Alje Jerimskie 20, Nitro Ugaro</dd>
-								<dt>Telefone:</dt>
-								<dd>(552) 365.2014</dd>
-								<dt>E-mail:</dt>
-								<dd>contact@tagdiv.com</dd>
-								<dt>Seg-Sex:</dt>
-								<dd>09:00 &#8211; 18:00</dd>
-								<dt>Sab:</dt>
-								<dd>10:00 &#8211; 15:00</dd>
-								<dt>Dom:</dt>
-								<dd>Fechado</dd>
-							</dl>
+							<h3>Atenção:</h3>
+							<p class="dl-horizontal">
+							Aos nossos clientes,
+							gentileza preencher todos
+							os dados ao lado corretamente.
+							Assim que recebermos seu e-mail
+							entraremos em contato.
+							</p>
 							<p>
 								<span class="nodeLabelBox repTarget "></span>
 							</p>
@@ -85,7 +78,7 @@ include 'menuVert.php';
 					</div>
 					<div class="span8 ">
 						<div class="span-space" >
-							<h3>Deixe sua mensagem:</h3>
+							<h3>Entre em contato:</h3>
 							<div class="wpcf7" id="wpcf7-f204-p9-o1">
 								<form action="" method="post" class="wpcf7-form">
 									<p>
@@ -99,13 +92,8 @@ include 'menuVert.php';
 										</span>
 									</p>
 									<p>
-										<span class="wpcf7-form-control-wrap Company">
-											<input type="text" name="Empresa" value="" class="wpcf7-form-control wpcf7-text wpcf7-use-title-as-watermark watermark" size="40" title="Empresa" placeholder="Empresa">
-										</span>
-									</p>
-									<p>
 										<span class="wpcf7-form-control-wrap Subject">
-											<textarea name="Subject" class="wpcf7-form-control  wpcf7-textarea" cols="92" rows="10"></textarea>
+                                                                                    <textarea name="Subject" class="wpcf7-form-control  wpcf7-textarea" cols="92" rows="10" placeholder="Digite seu texto"></textarea>
 										</span>
 									</p>
 									<p>

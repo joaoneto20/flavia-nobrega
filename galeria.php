@@ -17,20 +17,27 @@ include 'menuVert.php';
 		<div id="xcontent">
 
 			<!-- .gallery-image-post -->
-			<div class="gallery-image-post gallery-image-l" style="padding-right:100px;">
-				<div class="gallery-light-ray-wrap">
-					<img class="gallery-light-spot spot-l" src="images/background/spot-light.png" alt=""/>
-					<img class="gallery-light-ray ray-l" src="images/background/white-lights/IES-wide.png" alt=""/>
-				</div>
-				<a class="lightbox" href="images/gallery_images/rt-011.jpg" title="Fantasy dream" >
-					<div class="frame-wrap">
-						<img class="gallery-frame frame-l" src="images/gallery/frames1/shadow-wide.png" alt=""/>
-					</div>
-					<img width="800" height="500" src="images/gallery_images/rt-011.jpg" class="attachment-landscape wp-post-image" alt="Fantasy dream" title="Fantasy dream" />
-				</a>
-				<div class="pic-label-title" style = "color:#ffffff">Fantasy dream</div>
-				<img class="td-3d-object Statue-png" src="images/3d-objects/Statue.png" alt=""/>
-			</div>
+                        <?php
+                        require 'conexao.php';
+                        
+                        $m = mysql_query("select nome FROM imagem ");
+                        
+                        while ($dados = mysql_fetch_assoc($m)){
+		
+                        echo '
+                        <div class="gallery-image-post gallery-image-l" style="padding-right:100px;">
+                            <div class="gallery-light-ray-wrap">
+                                <img class="gallery-light-spot spot-l" src="images/background/spot-light.png" alt=""/>
+                                <img class="gallery-light-ray ray-l" src="images/background/white-lights/IES-wide.png" alt=""/>
+                            </div>
+                            <a class="lightbox" href="images/gallery_images/rt-011.jpg" title="" >
+                                <img width="620" height="465" src="imagem-fotos/'.$dados['nome'].'" class="attachment-landscape wp-post-image" alt="Peças em porcelana" title="Peças em porcelana" />
+                            </a>                               
+                        </div>
+                        ';
+                        }
+                        ?>
+                        
 			<!-- /.gallery-image-post -->
 
 
@@ -64,7 +71,6 @@ include 'menuVert.php';
 					<img width="800" height="500" src="images/gallery_images/rt-031.jpg" class="attachment-landscape wp-post-image" alt="3d animation" title="3d animation" />
 				</a>
 				<div class="pic-label-title" style = "color:#ffffff">3d animation</div>
-				<img class="td-3d-object Toys-png" src="images/3d-objects/Toys.png" alt=""/>
 			</div>
 			<!-- /.gallery-image-post -->
 
@@ -99,7 +105,6 @@ include 'menuVert.php';
 					<img width="500" height="500" src="images/gallery_images/rt-051.jpg" class="attachment-square wp-post-image" alt="Paint color" title="Paint color" />
 				</a>
 				<div class="pic-label-title" style = "color:#ffffff">Paint color</div>
-				<img class="td-3d-object Vase-png" src="images/3d-objects/Vase.png" alt=""/>
 			</div>
 			<!-- /.gallery-image-post -->
 
