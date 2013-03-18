@@ -25,7 +25,7 @@ require 'menuAdm.php';
                             echo '<tr>';
                             echo '<td><a href="exibirVideos.php?id=' . $res['id'] . '">' . $res['titulo'] . '</a></td>';
                             echo '<td><a class ="btn btn-success" href="editarVideo.php?id=' . $res['id'] . '">Editar</a></td>';
-                            echo '<td><a class ="btn btn-danger" href="#">Excluir</a><br></td>';
+                            echo '<td><a class ="btn btn-danger" href="listarVideo.php?del=' . $res['id'] . '">Excluir</a><br></td>';
                             echo '</tr>';
 
                         }
@@ -37,4 +37,17 @@ require 'menuAdm.php';
 </div>
 <?php
 require 'footerAdm.php';
+?>
+
+<?php
+//###### excluir do banco ########
+
+if(!empty($_GET['del'])){
+    $delid = mysql_real_escape_string($_GET['del']);//pega o id do usuário a ser excluido
+    $querydel = "DELETE FROM video WHERE id = '$delid'";// query para eliminar do banco
+    $exeqrrdel = mysql_query($querydel) or die;//executa a query
+    if($exeqrrdel){
+        echo '<script>alert("Vídeo excluído com sucesso!");</script>';
+    }
+}
 ?>
