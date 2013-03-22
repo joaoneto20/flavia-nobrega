@@ -6,7 +6,7 @@ require 'menuUsuario.php';
 <div class="container-fluid">
     <div class="row-fluid">
             <h3 style="text-align: center;">Relação de Vídeos Cadastrado</h3>
-            <table class="table table-hover" style="max-width: 800px; margin-left: 20%;">
+            <table class="table table-hover table-bordered" style="max-width: 800px; margin-left: 20%;">
                 <tbody>
                     <?php
                     require 'conexao.php';

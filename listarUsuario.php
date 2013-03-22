@@ -9,11 +9,39 @@ require 'conexao.php';
 
             <h3 style="text-align: center;">Relação de usuários cadastrado</h3>
             
-            <table class="table table-hover" style="max-width: 800px; margin-left: 20%;">
+            <table class="table table-hover table-bordered" style="max-width: 800px; margin-left: 15%;">
                 <tbody>
-
+                    <tr>
+                        <th style="text-align: left;">Nome</th>
+                        <th style="text-align: center;">Login</th>
+                        <th style="text-align: center;">E-mail</th>
+                        <th style="text-align: center;">Ações</th>
+                    </tr>
                     <?php                    
-                    $query = "SELECT id, nome, nomeUsuario, email FROM pessoa WHERE id != '' ORDER BY id DESC";
+                    $numreg = 5; // Quantos registros por página vai ser mostrado
+                        if (!isset($pg)) {
+                            $pg = 0;
+                        }
+                    $inicial = @$_GET['pg'] * $numreg;
+                    
+                    $sql = mysql_query("SELECT * FROM pessoa LIMIT $inicial, $numreg");
+                    
+                    $sql_conta = mysql_query("SELECT * FROM pessoa");
+	
+                    $quantreg = mysql_num_rows($sql_conta);
+                    
+                    while ($res = mysql_fetch_assoc($sql)) {
+                            echo '<tr>';
+                            echo '<td style="text-align: left;"><a href="#?id=' . $res['id'] . '">' . $res['nome'] . '</a></td>';
+                            echo '<td>' . $res['nomeUsuario'] . '</td>';
+                            echo '<td>' . $res['email'] . '</td>';
+                            echo '<td style="text-align: center;"><a class ="btn btn-success" href="editarUsuario.php?id=' . $res['id'] . '">Editar</a>&nbsp;';
+                            echo '<a class ="btn btn-danger" href="listarUsuario.php?del=' . $res['id'] . '">Excluir</a><br></td>';
+                            echo '</tr>';
+                        }
+                    
+                    
+                    /*$query = "SELECT id, nome, nomeUsuario, email FROM pessoa WHERE id != '' ORDER BY id DESC";
                     $exequery = mysql_query($query) or die(mysql_error());
 
                     if (mysql_num_rows($exequery) <= 0) {
@@ -24,17 +52,20 @@ require 'conexao.php';
 
                         while ($res = mysql_fetch_assoc($exequery)) {
                             echo '<tr>';
-                            echo '<td><a href="#?id=' . $res['id'] . '">' . $res['nome'] . '</a></td>';
+                            echo '<td style="text-align: left;"><a href="#?id=' . $res['id'] . '">' . $res['nome'] . '</a></td>';
                             echo '<td>' . $res['nomeUsuario'] . '</td>';
                             echo '<td>' . $res['email'] . '</td>';
-                            echo '<td><a class ="btn btn-success" href="editarUsuario.php?id=' . $res['id'] . '">Editar</a></td>';
-                            echo '<td><a class ="btn btn-danger" href="listarUsuario.php?del=' . $res['id'] . '">Excluir</a><br></td>';
+                            echo '<td style="text-align: right;"><a class ="btn btn-success" href="editarUsuario.php?id=' . $res['id'] . '">Editar</a>&nbsp;';
+                            echo '<a class ="btn btn-danger" href="listarUsuario.php?del=' . $res['id'] . '">Excluir</a><br></td>';
                             echo '</tr>';
                         }
-                    }
+                    }*/
                     ?>
                 </tbody>
             </table>
+             <div class="pagination pagination-centered">
+                <?php include 'paginacao.php'; ?>
+            </div>
     </div>
 </div>
 <?php

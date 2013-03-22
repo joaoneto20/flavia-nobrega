@@ -1,6 +1,7 @@
 <?php
+require 'headerAdm.php';
+require 'menuAdm.php';
 require 'conexao.php';
-include 'confirmacaoUsuario.php';
 ?>
 <hr>
 <div class="container-fluid">

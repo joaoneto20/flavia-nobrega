@@ -1,5 +1,5 @@
 <?php
-include ('conexao.php');
+require ('conexao.php');
 $nome            = $_POST["nome"];
 $nomeUsuario     = $_POST["nomeUsuario"];
 $email           = $_POST["email"];
