@@ -30,9 +30,9 @@ require 'menuAdm.php';
                         while ($res = mysql_fetch_array($sql)) {
 
                             echo '<tr>';
-                            echo '<td style="text-align: left;"><a href="exibirVideos.php?id=' . $res['id'] . '">' . $res['titulo'] . '</a></td>';
+                            echo '<td style="text-align: left;"><a href="exibirVideos.php?id=' . $res['id'] . '">' . HTMLSPECIALCHARS(mysql_real_escape_string($res['titulo'])) . '</a></td>';
                             echo '<td style="text-align: center;"><a class ="btn btn-success" href="editarVideo.php?id=' . $res['id'] . '">Editar</a>&nbsp;';
-                            echo '<a class ="btn btn-danger" href="listarVideo.php?del=' . $res['id'] . '">Excluir</a><br></td>';
+                            echo '<a class ="btn btn-danger" href="listarVideos.php?del=' . $res['id'] . '">Excluir</a><br></td>';
                             echo '</tr>';
 
                         }

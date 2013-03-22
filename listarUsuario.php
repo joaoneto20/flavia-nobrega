@@ -32,9 +32,9 @@ require 'conexao.php';
                     
                     while ($res = mysql_fetch_assoc($sql)) {
                             echo '<tr>';
-                            echo '<td style="text-align: left;"><a href="#?id=' . $res['id'] . '">' . $res['nome'] . '</a></td>';
-                            echo '<td>' . $res['nomeUsuario'] . '</td>';
-                            echo '<td>' . $res['email'] . '</td>';
+                            echo '<td style="text-align: left;"><a href="#?id=' . $res['id'] . '">' . HTMLSPECIALCHARS(mysql_real_escape_string($res['nome'])) . '</a></td>';
+                            echo '<td>' . HTMLSPECIALCHARS(mysql_real_escape_string($res['nomeUsuario'])) . '</td>';
+                            echo '<td>' . HTMLSPECIALCHARS(mysql_real_escape_string($res['email'])) . '</td>';
                             echo '<td style="text-align: center;"><a class ="btn btn-success" href="editarUsuario.php?id=' . $res['id'] . '">Editar</a>&nbsp;';
                             echo '<a class ="btn btn-danger" href="listarUsuario.php?del=' . $res['id'] . '">Excluir</a><br></td>';
                             echo '</tr>';

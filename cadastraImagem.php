@@ -8,10 +8,12 @@ require 'menuAdm.php';
         <h2>Adicionar Imagem</h2>
 
         <form method="POST" action="" enctype="multipart/form-data">
-            Arquivo:<br>
+            <label>Arquivo:</label>
             <input type="file" name="imagem">
+            <label>Título:</label>
+            <input type="text" name="titulo">
             <br>
-            <input type="submit" value="Enviar" name="enviei"/>
+            <input type="submit"  class="btn btn-primary" value="Enviar" name="enviei"/>
         </form>
 
         <?php
@@ -23,14 +25,15 @@ require 'menuAdm.php';
 
             $imagem = $_FILES['imagem'];
             $destino = $imagem['tmp_name'];
-            $nome = md5($imagem['name']);
+            $nome = $imagem['name'];
             $tipo = $imagem['type'];
+            $titulo = $_POST['titulo'];
 
             require('uploadImagem.php');
 
             if (!empty($nome) && in_array($tipo, $permite)) {
-                upload($destino, $nome, 620, $pasta);
-                $sql = "INSERT INTO imagem(nome) VALUES ('$nome')";
+                upload($destino, $nome, 720, $pasta);
+                $sql = "INSERT INTO imagem(nome,titulo) VALUES ('$nome','$titulo')";
 
                 $query = mysql_query($sql) or die(mysql_error());
                 echo '<script>alert("Enviado com sucesso!");</script>';

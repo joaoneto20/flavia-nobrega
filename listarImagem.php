@@ -31,14 +31,12 @@ require 'menuAdm.php';
                     
                         while ($res = mysql_fetch_array($sql)) {
                             echo '<tr>';
-                            echo '<td style="text-align: left;"><a href="#?id=' . $res['id'] . '">' . $res['titulo'] . '</a></td>';
-                            echo '<td style="text-align: center;"><a class ="btn btn-success" href="#">Editar</a>&nbsp;';
-                            echo '<a class ="btn btn-danger" href="#">Excluir</a><br></td>';
+                            echo '<td style="text-align: left;"><a href="exibirImagem.php?id=' . $res['id'] . '">' . HTMLSPECIALCHARS(mysql_real_escape_string($res["titulo"])) . '</a></td>';
+                            echo '<td style="text-align: center;"><a class ="btn btn-success" href="editarImagem.php?id=' . $res['id'] . '">Editar</a>&nbsp;';
+                            echo '<a class ="btn btn-danger" href="ListarImagem.php?del=' . $res['id'] . '">Excluir</a><br></td>';
                             echo '</tr>';
                         }
                     
-                    
-
                     /*$query = "SELECT id, nome FROM imagem WHERE id != '' ORDER BY id DESC";
 
                     $exequery = mysql_query($query) or die(mysql_error());
@@ -68,4 +66,16 @@ require 'menuAdm.php';
 </div>
 <?php
 require 'footerAdm.php';
+?>
+<?php
+//###### excluir do banco ########
+
+if(!empty($_GET['del'])){
+    $delid = mysql_real_escape_string($_GET['del']);//pega o id do usuário a ser excluido
+    $querydel = "DELETE FROM imagem WHERE id = '$delid'";// query para eliminar do banco
+    $exeqrrdel = mysql_query($querydel) or die;//executa a query
+    if($exeqrrdel){
+        echo '<script>alert("Imagem excluída com sucesso!");</script>';
+    }
+}
 ?>

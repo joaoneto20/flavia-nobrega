@@ -46,7 +46,7 @@ include 'menuVert.php';
                 <div class="span6 ">
                     <div class="span-space" >
                         <p style="text-align: center;">
-                            <a href="images/gallery_images/hoto_about1.jpg">
+                            <a href="#">
                                 <img class="size-full wp-image-217 aligncenter" title="hoto_about1" src="images/gallery_images/hoto_about1.jpg" alt="" width="940" height="460" />
                             </a>
                         </p>
@@ -61,7 +61,7 @@ include 'menuVert.php';
                             to provide with the tools to grow and make the new digital landscape.
                         </p>
                         <p>
-                            <a class="btn btn-large " href="#" style="background-color:#63712f; ">Ver Galeria</a>
+                            <a class="btn btn-large " href="galeria.php" style="background-color:#63712f; ">Ver Galeria</a>
                         </p>
                     </div>
                 </div>

@@ -23,7 +23,7 @@ require 'menuUsuario.php';
 
                         while ($res = mysql_fetch_assoc($exequery)) {
                             echo '<tr>';
-                            echo '<td style="text-align:center;"><a href="verVideo.php?id=' . $res['id'] . '">' . $res['titulo'] . '</a></td>';
+                            echo '<td style="text-align:center;"><a href="verVideo.php?id=' . $res['id'] . '">' . HTMLSPECIALCHARS(mysql_real_escape_string($res['titulo'])) . '</a></td>';
                             echo '</tr>';
 
                         }

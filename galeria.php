@@ -30,9 +30,9 @@ include 'menuVert.php';
                                 <img class="gallery-light-spot spot-l" src="images/background/spot-light.png" alt=""/>
                                 <img class="gallery-light-ray ray-l" src="images/background/white-lights/IES-wide.png" alt=""/>
                             </div>
-                            <a class="lightbox" href="images/gallery_images/rt-011.jpg" title="" >
-                                <img width="620" height="465" src="imagem-fotos/'.$dados['nome'].'" class="attachment-landscape wp-post-image" alt="Peças em porcelana" title="Peças em porcelana" />
-                            </a>                               
+                            <a class="lightbox" href="imagem-fotos/'.HTMLSPECIALCHARS(mysql_real_escape_string($dados['nome'])) .'" >
+                                <img width="800" height="500" src="imagem-fotos/'.HTMLSPECIALCHARS(mysql_real_escape_string($dados['nome'])) .'" class="attachment-landscape wp-post-image" alt="Peças em porcelana" />
+                            </a>
                         </div>
                         ';
                         }
