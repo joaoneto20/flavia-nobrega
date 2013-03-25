@@ -27,19 +27,15 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Usuário <b class="caret"></b></a>
                             <ul class="dropdown-menu">
 
-                                <?php
-                                $query = "SELECT id, nome, nomeUsuario, email FROM pessoa WHERE id != '' ORDER BY id DESC";
+                            <?php               
+         
+                   
+                                $query = "SELECT * FROM pessoa WHERE nomeUsuario = '".$_SESSION['nomeUsuario']."'";
                                 $exequery = mysql_query($query) or die(mysql_error());
-
-                                if (mysql_num_rows($exequery) <= 0) {
-                                    echo "<script type='text/javascript'> 
-                                            alert('Tabela Vazia'); 
-                                            </script>";
-                                } else {
-
-                                    $res = mysql_fetch_assoc($exequery);
+                                $res = mysql_fetch_assoc($exequery);
+                                
                                     echo'<li><a href="alterarSenha.php?id=' . $res['id'] . '"><i class="icon-th-list"></i> Alterar Senha</a></li>';
-                                }
+                   
                                 ?>
                             </ul>
                         </li>

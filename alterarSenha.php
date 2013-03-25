@@ -1,6 +1,5 @@
 <?php
-require 'headerAdm.php';
-require 'menuAdm.php';
+require 'headerUsuario.php';
 require 'conexao.php';
 ?>
 <hr>
@@ -29,9 +28,9 @@ require 'conexao.php';
 
             //atualizar no banco ############
             if (isset($_POST['enviar'])) {
-                $senha = $_POST["senha"];
+                $senha = md5($_POST["senha"]);
                 
-                $qrr = "UPDATE pessoa SET senha = '$senha'";
+                $qrr = "UPDATE pessoa SET senha = '$senha' WHERE id = '$uid'";
                 $exe = mysql_query($qrr) or die(mysql_error());
                 if($exe){
                 echo "<script type='text/javascript'> 
