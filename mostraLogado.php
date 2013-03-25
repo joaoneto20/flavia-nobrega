@@ -6,6 +6,5 @@
 
 <?php
 echo $_SESSION['nome'];
-
 ?>
 </html>
