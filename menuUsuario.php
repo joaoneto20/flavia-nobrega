@@ -28,6 +28,7 @@
                             <ul class="dropdown-menu">
 
                                 <?php
+                                require 'conexao.php';
                                 $query = "SELECT id, nome, nomeUsuario, email FROM pessoa WHERE id != '' ORDER BY id DESC";
                                 $exequery = mysql_query($query) or die(mysql_error());
 

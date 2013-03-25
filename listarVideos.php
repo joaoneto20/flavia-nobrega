@@ -10,6 +10,7 @@ require 'menuAdm.php';
                 <tbody>
                     <tr>
                         <th style="text-align: left;">Nome</th>
+                        <th style="text-align: center;">Status</th>
                         <th style="text-align: center;">Ações</th>
                     </tr>
                     <?php
@@ -31,6 +32,12 @@ require 'menuAdm.php';
 
                             echo '<tr>';
                             echo '<td style="text-align: left;"><a href="exibirVideos.php?id=' . $res['id'] . '">' . HTMLSPECIALCHARS(mysql_real_escape_string($res['titulo'])) . '</a></td>';
+                            if ($res['status']== 1) {
+                                echo '<td style="text-align: center;">Ativo</td>';
+                            } else {
+                                echo '<td style="text-align: center;">Inativo</td>';
+                            }
+                            
                             echo '<td style="text-align: center;"><a class ="btn btn-success" href="editarVideo.php?id=' . $res['id'] . '">Editar</a>&nbsp;';
                             echo '<a class ="btn btn-danger" href="listarVideos.php?del=' . $res['id'] . '">Excluir</a><br></td>';
                             echo '</tr>';

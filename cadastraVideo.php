@@ -13,8 +13,9 @@ if (isset($_POST['send'])) {//verifica se o botão foi setado
     $titulo = $_POST["titulo"];
     $endereco = $_POST["endereco"];
     $descricao = $_POST["descricao"];
+    $status = $_POST["status"];
 
-    $sql = "INSERT INTO video(titulo, endereco, descricao) VALUES ('$titulo','$endereco','$descricao')";
+    $sql = "INSERT INTO video(titulo, endereco, descricao, status) VALUES ('$titulo','$endereco','$descricao', $status)";
 
     $query = mysql_query($sql) or die(mysql_error());
 
@@ -35,7 +36,13 @@ if (isset($_POST['send'])) {//verifica se o botão foi setado
                 <label>Link do vídeo:</label>
                 <input class="input-large" type="text" name="endereco" placeholder="Cole o link do vídeo">
                 <label>Descrição:</label>
-                <textarea name="descricao" cols="100" rows="5" placeholder="Digite Uma descrição"></textarea><br>
+                <textarea name="descricao" cols="100" rows="5" placeholder="Digite Uma descrição"></textarea>
+                <label class="radio">
+                    <input type="radio" name="status[]" id="optionsRadios1" value="1" checked >Ativo
+                </label>
+                <label class="radio">
+                    <input type="radio" name="status[]" id="optionsRadios2" value="0" >Inativo
+                </label>
                 <input  class="btn btn-primary" type="submit" value="Cadastrar" name="send"/>
             </form>
         </div>

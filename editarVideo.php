@@ -21,25 +21,41 @@ require 'conexao.php';
 
                 $res = mysql_fetch_assoc($exeqr);
                 echo $res['titulo'];
-                echo '                            
-                            <form action="#" method="POST">
-                            <label>Título:</label>
-                            <input class="input-large" type="text" name="titulo" value="' . $res['titulo'] . '"><br>
-                            <label>Link do vídeo:</label>
-                            <input class="input-large" type="text" name="endereco" value="' . $res['endereco'] . '"><br>
-                            <label>Descrição:</label>
-                            <textarea cols="100" rows="5" name="descricao" > ' . $res['descricao'] . ' </textarea><br>
-                            <input class="btn btn-success" type="submit" name="enviar" value="Editar"><br>
-                            </form>
-                            ';
+                echo '<form action="#" method="POST">';
+                echo '<label>Título:</label>';
+                echo '<input class="input-large" type="text" name="titulo" value="' . $res['titulo'] . '"><br>';
+                echo '<label>Link do vídeo:</label>';
+                echo '<input class="input-large" type="text" name="endereco" value="' . $res['endereco'] . '"><br>';
+                echo '<label>Descrição:</label>';
+                echo '<textarea cols="100" rows="5" name="descricao" > ' . $res['descricao'] . ' </textarea>';
+                    if ($res['status']==1) {
+                        $set_checked = "CHECKED";
+                        echo '<label class="radio">';
+                        echo '<input type="radio" name="status" id="optionsRadios1" value=' . $res['status'] . ' '.$set_checked .' >Ativo';
+                        echo '</label>';
+                        echo '<label class="radio">';
+                        echo '<input type="radio" name="status" id="optionsRadios2" value="0" >Inativo';
+                        echo '</label>';
+                    }else{
+                        $set_checked = "CHECKED";
+                        echo '<label class="radio">';
+                        echo '<input type="radio" name="status" id="optionsRadios1" value="1" >Ativo';
+                        echo '</label>';
+                        echo '<label class="radio">';
+                        echo '<input type="radio" name="status" id="optionsRadios2" value=' . $res['status'] . ' '.$set_checked .' >Inativo';
+                        echo '</label>';
+                    }
+                echo '<input class="btn btn-success" type="submit" name="enviar" value="Editar"><br>';
+                echo '</form>';
 
                 //atualizar no banco ############
                 if (isset($_POST['enviar'])) {
                     $titulo = $_POST["titulo"];
                     $endereco = $_POST["endereco"];
                     $descricao = $_POST["descricao"];
+                    $status = $_POST["status"];
 
-                    $qrr = "UPDATE video SET titulo = '$titulo', endereco = '$endereco', descricao = '$descricao' WHERE id = '$uid'";
+                    $qrr = "UPDATE video SET titulo = '$titulo', endereco = '$endereco', descricao = '$descricao', status = '$status' WHERE id = '$uid'";
                     $exe = mysql_query($qrr) or die(mysql_error());
                     echo "<script type='text/javascript'> 
                                     alert('Edição realizada com sucesso.'); 

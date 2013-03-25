@@ -11,7 +11,7 @@ require 'menuUsuario.php';
                     <?php
                     require 'conexao.php';
 
-                    $query = "SELECT id, titulo FROM video WHERE id != '' ORDER BY id DESC";
+                    $query = "SELECT id, titulo, status FROM video WHERE id != '' and status ='1' ORDER BY id DESC";
 
                     $exequery = mysql_query($query) or die(mysql_error());
 
