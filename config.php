@@ -7,8 +7,8 @@ $mail->SMTPAuth = true;//Ativa e-mail autenticado
 $mail->Host = 'smtp.gmail.com';//servidor de envio
 $mail->Port = '587';//porta de envio
 
-$mail->Username = 'joaoneto20@gmail.com';
-$mail->Password = 'vovo290333';
+$mail->Username = 'vinicius.eneas@gmail.com';
+$mail->Password = 'v1e2cl2114';
 
 $mail->From = $remetente;//remetente
 $mail->FromName = utf8_decode($nomeRemetente);//nome remetente

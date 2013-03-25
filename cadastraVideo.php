@@ -18,8 +18,6 @@ if (isset($_POST['send'])) {//verifica se o botão foi setado
     $sql = "INSERT INTO video(titulo, endereco, descricao, status) VALUES ('$titulo','$endereco','$descricao', $status)";
 
     $query = mysql_query($sql) or die(mysql_error());
-
-
     echo "<script type='text/javascript'> 
     alert('Cadastro realizado com sucesso.'); 
     </script>";

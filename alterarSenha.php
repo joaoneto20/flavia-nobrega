@@ -1,13 +1,12 @@
 <?php
 require 'headerUsuario.php';
-require 'menuUsuario.php';
 require 'conexao.php';
 ?>
 <hr>
 <div class="container-fluid">
     <div class="row-fluid">
         <div class="well" style="max-width: 300px; margin: auto; ">                
-            <h2>Alteração de Senha do Usuário</h2>
+            <h2>Edição de Usuários</h2>
             <?php
             $uid = mysql_real_escape_string($_GET['id']); //pega o id do objeto
             $query = "SELECT * FROM pessoa WHERE id= '$uid'"; //busca no banco de dados
@@ -18,8 +17,8 @@ require 'conexao.php';
             }
 
             $res = mysql_fetch_assoc($exeqr);
-            
-              echo '                            
+
+            echo '                            
                             <form action="#" method="POST">
                             <label>Nova senha: </label>
                              <input type="text" name="senha"><br>
@@ -29,21 +28,21 @@ require 'conexao.php';
 
             //atualizar no banco ############
             if (isset($_POST['enviar'])) {
-                $senha = $_POST["senha"];
-                
-                $qrr = "UPDATE pessoa SET senha = '$senha'";
+                $senha = md5($_POST["senha"]);
+
+                $qrr = "UPDATE pessoa SET senha = '$senha' WHERE id = '$uid'";
                 $exe = mysql_query($qrr) or die(mysql_error());
-                if($exe){
-                echo "<script type='text/javascript'> 
+                if ($exe) {
+                    echo "<script type='text/javascript'> 
                       alert('Senha alterada com sucesso.'); 
                       </script>";
                 }
             }
             ?>
-            <a href="indexUsuario.php" class="btn btn-info" style="text-align: center;">Voltar</a>                            
+            <a href="listarUsuario.php" class="btn btn-info" style="text-align: center;">Voltar</a>                            
         </div>
     </div>
 </div>
 <?php
-require 'footerUsuario.php';
+require 'footerAdm.php';
 ?>
