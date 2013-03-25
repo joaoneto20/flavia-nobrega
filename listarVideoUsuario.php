@@ -6,12 +6,12 @@ require 'menuUsuario.php';
 <div class="container-fluid">
     <div class="row-fluid">
             <h3 style="text-align: center;">Relação de Vídeos Cadastrado</h3>
-            <table class="table table-hover" style="max-width: 800px; margin-left: 20%;">
+            <table class="table table-hover table-bordered" style="max-width: 800px; margin-left: 20%;">
                 <tbody>
                     <?php
                     require 'conexao.php';
 
-                    $query = "SELECT id, titulo FROM video WHERE id != '' ORDER BY id DESC";
+                    $query = "SELECT id, titulo, status FROM video WHERE id != '' and status ='1' ORDER BY id DESC";
 
                     $exequery = mysql_query($query) or die(mysql_error());
 
@@ -23,7 +23,7 @@ require 'menuUsuario.php';
 
                         while ($res = mysql_fetch_assoc($exequery)) {
                             echo '<tr>';
-                            echo '<td style="text-align:center;"><a href="verVideo.php?id=' . $res['id'] . '">' . $res['titulo'] . '</a></td>';
+                            echo '<td style="text-align:center;"><a href="verVideo.php?id=' . $res['id'] . '">' . HTMLSPECIALCHARS(mysql_real_escape_string($res['titulo'])) . '</a></td>';
                             echo '</tr>';
 
                         }
