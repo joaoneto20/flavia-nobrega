@@ -41,7 +41,8 @@ require 'conexao.php';
                 }
             }
             ?>
-            <a href="indexUsuario.php" class="btn btn-info" style="text-align: center;">Voltar</a>                            
+            <a href="indexUsuario.php" class="btn btn-info" style="text-align: center;">Voltar</a>
+            
         </div>
     </div>
 </div>
