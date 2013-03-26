@@ -3,16 +3,15 @@ require_once('Mailer/class.phpmailer.php');
 require_once ('Mailer/class.smtp.php');
 $mail = new PHPMailer();//INICIA A CLASSE
 
-$mail->CharSet = 'UTF-8';
 $mail->Mailer = 'smtp';
 $mail->SMTPSecure = 'ssl';
 $mail->IsSMTP();//Habilita envio smtp
-$mail->Host = 'smtp.gmail.com';//servidor de envio
-$mail->Port = '587';//porta de envio
+$mail->Host = 'smtp.flavianobrega.com';//servidor de envio
+$mail->Port = '465';//porta de envio
 $mail->SMTPAuth = true;//Ativa e-mail autenticado
 
-$mail->Username = 'vinicius.eneas@gmail.com';
-$mail->Password = 'v1e2cl2114';
+$mail->Username = 'flavia@flavianobrega.com';
+$mail->Password = 'admin2013fla';
 
 $mail->From = $remetente;//remetente
 $mail->FromName = utf8_decode($nomeRemetente);//nome remetente
