@@ -1,5 +1,5 @@
 <?php function sendMail($assunto,$msg,$remetente,$nomeRemetente,$email,$nome){
-require_once('Mailer/class.phpmailer.php') ;
+require_once('Mailer/class.phpmailer.php');
 require_once ('Mailer/class.smtp.php');
 $mail = new PHPMailer();//INICIA A CLASSE
 
@@ -8,7 +8,7 @@ $mail->Mailer = 'smtp';
 $mail->SMTPSecure = 'ssl';
 $mail->IsSMTP();//Habilita envio smtp
 $mail->Host = 'smtp.gmail.com';//servidor de envio
-$mail->Port = '465';//porta de envio
+$mail->Port = '587';//porta de envio
 $mail->SMTPAuth = true;//Ativa e-mail autenticado
 
 $mail->Username = 'vinicius.eneas@gmail.com';

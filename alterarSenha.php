@@ -1,6 +1,6 @@
-
 <?php
 require 'headerUsuario.php';
+require 'menuUsuario.php';
 require 'conexao.php';
 ?>
 <hr>
@@ -41,10 +41,10 @@ require 'conexao.php';
                 }
             }
             ?>
-            <a href="listarUsuario.php" class="btn btn-info" style="text-align: center;">Voltar</a>                            
+            <a href="indexUsuario.php" class="btn btn-info" style="text-align: center;">Voltar</a>                            
         </div>
     </div>
 </div>
 <?php
-require 'footerAdm.php';
+require 'footerUsuario.php';
 ?>
