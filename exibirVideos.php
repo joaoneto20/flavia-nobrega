@@ -16,15 +16,20 @@ require 'menuAdm.php';
                 if (mysql_num_rows($exeqr) <= 0) {
                     reader('listarVideos.php');
                 }
+                
+                try {
+                    $res = mysql_fetch_assoc($exeqr);
+                    echo '<div class="img-polaroid"';
+                    echo $res['titulo'];
+                    echo '<br>';
+                    echo $res['endereco'];
+                    echo '</div>';
+                    echo '<a href="listarVideos.php" class="btn btn-info" style="text-align: center;">Voltar</a>';
+                    //echo '<iframe width="425" height="350" src="http://www.youtube.com/embed/' . $res['endereco'] . '" frameborder="0" allowfullscreen></iframe>';
+                    } catch (Exception $exc) {
+                        echo $exc->getTraceAsString(mysql_error());
+                        }
 
-                $res = mysql_fetch_assoc($exeqr);
-                echo '<div class="img-polaroid"';
-                echo $res['titulo'];
-                echo '<br>';
-                echo $res['endereco'];
-                echo '</div>';
-                echo '<a href="listarVideos.php" class="btn btn-info" style="text-align: center;">Voltar</a>';
-                //echo '<iframe width="425" height="350" src="http://www.youtube.com/embed/' . $res['endereco'] . '" frameborder="0" allowfullscreen></iframe>';
                 ?>
             </h3>
         </div>
