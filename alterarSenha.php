@@ -7,7 +7,7 @@ require 'conexao.php';
 <div class="container-fluid">
     <div class="row-fluid">
         <div class="well" style="max-width: 300px; margin: auto; ">                
-            <h2>Edição de Usuários</h2>
+            <h2>Alterar Senha</h2>
             <?php
             $uid = mysql_real_escape_string($_GET['id']); //pega o id do objeto
             $query = "SELECT * FROM pessoa WHERE id= '$uid'"; //busca no banco de dados
