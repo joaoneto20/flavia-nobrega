@@ -1,29 +1,48 @@
-          <?php
-            require_once 'conexao.php';
+<?php
 
-            $nomeUsuario = $_POST["nomeUsuario"];
-            $senha = md5($_POST["senha"]);
+session_start();
+?>
+<?php
 
-            $sql = ("select * from pessoa where nomeUsuario = '$nomeUsuario' and senha = '$senha'");
+require 'conexao.php';
 
-            $query = mysql_query($sql);
+function tratar($str) {
 
-            if ($resultado = mysql_fetch_assoc($query)) {
+    $str = preg_replace(sql_regcase("/(\n|\r|%0a|%0d|Content-Type:|bcc:|to:|cc:|Autoreply:|from|select|insert|delete|where|drop table|show tables|#|\*|--|\\\\)/"), "", $str);
+    
+    $retorno = trim($str);
+    
+    $retorno = strip_tags($str);
+    
+    $retorno = addslashes($str);  
 
-                session_start();
-                $_SESSION['nomeUsuario'] = $resultado["nomeUsuario"];
-                $_SESSION['senha'] = $resultado["senha"];
-                $_SESSION['nome'] = $resultado["nome"];
-                $_SESSION['categoria'] = $resultado["categoria"];
+    return $retorno;
+}
 
-                //Header("Location: usuario.php"); 
-            }
+$nomeUsuario = isset($_POST["nomeUsuario"]) ? tratar($_POST["nomeUsuario"]) : "0";
+$senha = md5($_POST["senha"]);
+$sql = ("select * from pessoa where nomeUsuario = '$nomeUsuario' and senha = '$senha'");
+$query = mysql_query($sql);
 
-            if ($_SESSION['categoria'] == 1) {
-                header("location: indexAdmin.php");
-            } else if ($_SESSION['categoria'] == 2) {
-                header("location: indexUsuario.php");
-            } else {
-                header("Location: erro.php");
-            }
-            ?>
+if (eregi('[^a-zA-Z0-9_]', $nomeUsuario)) {
+
+    die('Usuário Inválido');
+} else if ($resultado = mysql_fetch_assoc($query)) {
+
+    $_SESSION['nomeUsuario'] = $resultado["nomeUsuario"];
+    $_SESSION['senha'] = $resultado["senha"];
+    $_SESSION['nome'] = $resultado["nome"];
+    $_SESSION['categoria'] = $resultado["categoria"];
+} else {
+    session_destroy();
+    echo "Usuário ou Senha inválidos";
+}
+
+if ($_SESSION['categoria'] == 1) {
+    header("location: indexAdmin.php");
+} else if ($_SESSION['categoria'] == 2) {
+    header("location: indexUsuario.php");
+} else {
+    header("Location: erro.php");
+}
+?>

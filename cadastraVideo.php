@@ -21,6 +21,7 @@ if (isset($_POST['send'])) {//verifica se o botão foi setado
     echo "<script type='text/javascript'> 
     alert('Cadastro realizado com sucesso.'); 
     </script>";
+    echo "<script language = 'javascript'> location.href = 'cadastraVideo.php'; </script>";
 }
 ?>
 <hr>

@@ -7,7 +7,7 @@ require 'conexao.php';
 <div class="container-fluid">
     <div class="row-fluid">
         <div class="well" style="max-width: 300px; margin: auto; ">                
-            <h2>Alterar Senha</h2>
+            <h2>Editar Usuário</h2>
             <?php
             //Listar o formulário com os dados preenchidos #######
             $uid = mysql_real_escape_string($_GET['id']); //pega o id do objeto

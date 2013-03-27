@@ -76,6 +76,7 @@ if(!empty($_GET['del'])){
     $exeqrrdel = mysql_query($querydel) or die;//executa a query
     if($exeqrrdel){
         echo '<script>alert("Imagem excluída com sucesso!");</script>';
+        echo "<script language = 'javascript'> location.href = 'listarImagem.php'; </script>";
     }
 }
 ?>

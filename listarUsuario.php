@@ -81,6 +81,7 @@ if(!empty($_GET['del'])){
     $exeqrrdel = mysql_query($querydel) or die;//executa a query
     if($exeqrrdel){
         echo '<script>alert("Usuário excluído com sucesso!");</script>';
+        echo "<script language = 'javascript'> location.href = 'listarUsuario.php'; </script>";
     }
 }
 ?>

@@ -26,8 +26,8 @@ function sendMail($assunto, $msg, $email, $nome, $remetente, $nomeRemetente) {
 
     if (!$mail->Send()) {
         echo 'Email não enviado com sucesso' . $mail->ErrorInfo;
-    } else {
-        echo 'Email enviado com sucesso';
-    }
+    } /*else {
+        echo "<script language = 'javascript'> location.href = 'indexAdmin.php'; </script>";
+    }*/
 }
 ?>

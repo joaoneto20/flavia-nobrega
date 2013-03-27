@@ -84,6 +84,7 @@ if(!empty($_GET['del'])){
     $exeqrrdel = mysql_query($querydel) or die;//executa a query
     if($exeqrrdel){
         echo '<script>alert("Vídeo excluído com sucesso!");</script>';
+        echo "<script language = 'javascript'> location.href = 'listarVideos.php'; </script>";
     }
 }
 ?>
