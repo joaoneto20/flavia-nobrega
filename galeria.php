@@ -20,7 +20,7 @@ include 'menuVert.php';
                         <?php
                         require 'conexao.php';
                         
-                        $m = mysql_query("select nome FROM imagem ");
+                        $m = mysql_query("select * FROM imagem ");
                         
                         while ($dados = mysql_fetch_assoc($m)){
 		
@@ -30,8 +30,8 @@ include 'menuVert.php';
                                 <img class="gallery-light-spot spot-l" src="images/background/spot-light.png" alt=""/>
                                 <img class="gallery-light-ray ray-l" src="images/background/white-lights/IES-wide.png" alt=""/>
                             </div>
-                            <a class="lightbox" href="imagem-fotos/'.HTMLSPECIALCHARS(mysql_real_escape_string($dados['nome'])) .'" >
-                                <img width="800" height="500" src="imagem-fotos/'.HTMLSPECIALCHARS(mysql_real_escape_string($dados['nome'])) .'" class="attachment-landscape wp-post-image" title="Peças em porcelana" alt="Peças em porcelana" />
+                            <a class="lightbox" href="imagem-fotos/'. htmlspecialchars(mysql_real_escape_string($dados['nome'])) .'" title="Peças em Porcelana Fria" >
+                                <img width="800" height="500" class="attachment-landscape wp-post-image" src="imagem-fotos/'. htmlspecialchars(mysql_real_escape_string($dados['nome'])) .'" title="Peças em porcelana" alt="Peças em porcelana" />
                             </a>
                         </div>
                         ';

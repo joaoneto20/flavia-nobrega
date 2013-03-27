@@ -1,30 +1,32 @@
-<?php function sendMail($assunto,$msg,$remetente,$nomeRemetente,$email,$nome){
-require_once('Mailer/class.phpmailer.php');
-require_once ('Mailer/class.smtp.php');
-$mail = new PHPMailer();//INICIA A CLASSE
+<?php
 
-$mail->Mailer = 'smtp';
-$mail->SMTPSecure = 'ssl';
-$mail->IsSMTP();//Habilita envio smtp
-$mail->Host = 'smtp.flavianobrega.com';//servidor de envio
-$mail->Port = '465';//porta de envio
-$mail->SMTPAuth = true;//Ativa e-mail autenticado
+function sendMail($assunto, $msg, $email, $nome, $remetente, $nomeRemetente) {
+    require_once 'Mailer/class.phpmailer.php';
+    require_once 'Mailer/class.smtp.php';
+    $mail = new PHPMailer(); //INICIA A CLASSE
 
-$mail->Username = 'flavia@flavianobrega.com';
-$mail->Password = 'admin2013fla';
+    $mail->Mailer = 'smtp';
+    $mail->SMTPSecure = 'ssl';
+    $mail->IsSMTP(); //Habilita envio smtp
+    $mail->Host = 'smtp.flavianobrega.com'; //servidor de envio
+    $mail->Port = '465'; //porta de envio
+    $mail->SMTPAuth = true; //Ativa e-mail autenticado
 
-$mail->From = $remetente;//remetente
-$mail->FromName = utf8_decode($nomeRemetente);//nome remetente
+    $mail->Username = 'flavia@flavianobrega.com';
+    $mail->Password = 'admin2013fla';
 
-$mail->IsHTML(true);
+    $mail->From = $email; // email de quem esta enviando
+    $mail->FromName = utf8_decode($nome); //nome de quem esta enviando
 
-$mail->Subject = utf8_decode($assunto);//assunto
-$mail->Body = utf8_decode($msg);//mensagem
-$mail->AddAddress($email,utf8_decode($nome));
+    $mail->IsHTML(true);
 
-    if(!$mail->Send()){
-        echo 'Email não enviado com sucesso' .$mail->ErrorInfo;
-    }else{
+    $mail->Subject = utf8_decode($assunto); //assunto
+    $mail->Body = utf8_decode($msg); //mensagem
+    $mail->AddAddress($remetente, utf8_decode($nomeRemetente));//remetente e nome remetente
+
+    if (!$mail->Send()) {
+        echo 'Email não enviado com sucesso' . $mail->ErrorInfo;
+    } else {
         echo 'Email enviado com sucesso';
     }
 }

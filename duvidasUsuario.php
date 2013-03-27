@@ -27,7 +27,7 @@ require 'conexao.php';
                         <label>Nome:</label>
                         <input type="text" class="disabledInput" name="nome" disabled value="' . $res['nome'] . '">
                         <label>E-mail:</label>
-                        <input type="text" class="disabledInput" name="email" value="' . $res['email'] . '">
+                        <input type="text" class="disabledInput" name="email" disabled value="' . $res['email'] . '">
                         <label>Assunto:</label>
                         <textarea rows="5" name="duvidas" placeholder="Digite aqui suas dúvidas"></textarea><br>
                         <input class="btn btn-success" type="submit" name="enviar" value="Enviar"><br>
