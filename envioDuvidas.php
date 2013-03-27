@@ -1,14 +1,13 @@
 <?php
-
 require 'conexao.php';
 require 'config.php';
 if (isset($_POST['enviar'])) {
-    $assunto = addcslashes(trim($_POST["Duvidas em Geral"]));
-    $nome = addcslashes(trim($_POST["nome"]));
-    $email = addcslashes(trim($_POST["email"]));
-    $msg = addcslashes(trim($_POST["duvidas"]));
-    $remetente = addcslashes(trim('flavia@flavianobrega.com'));
-    $nomeRemetente = addslashes(trim('Duvidas Video-Aulas'));
+    $assunto = $_POST["Duvidas em Geral"];
+    $nome = $_POST["nome"];
+    $email = $_POST["email"];
+    $msg = $_POST["duvidas"];
+    $remetente = 'flavia@flavianobrega.com';
+    $nomeRemetente = 'Flávia Nobrega';
     
         sendMail($assunto, $msg, $email, $nome, $remetente, $nomeRemetente);
         echo "<script type='text/javascript'> 

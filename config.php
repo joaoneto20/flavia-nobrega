@@ -6,10 +6,10 @@ function sendMail($assunto, $msg, $email, $nome, $remetente, $nomeRemetente) {
     $mail = new PHPMailer(); //INICIA A CLASSE
 
     $mail->Mailer = 'smtp';
-    $mail->SMTPSecure = 'ssl';
+    //$mail->SMTPSecure = 'ssl';
     $mail->IsSMTP(); //Habilita envio smtp
-    $mail->Host = 'smtp.flavianobrega.com'; //servidor de envio
-    $mail->Port = '465'; //porta de envio
+    $mail->Host = 'mail.flavianobrega.com'; //servidor de envio
+    $mail->Port = '26'; //porta de envio
     $mail->SMTPAuth = true; //Ativa e-mail autenticado
 
     $mail->Username = 'flavia@flavianobrega.com';
