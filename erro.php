@@ -1,33 +1,47 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>ERRO</title>
-        <link type="text/css" rel="stylesheet" href="CSS/styleIndex.css">
-        <script type="text/javascript" src="js/modal.js"></script>
-    </head>
-    <body>
-        <p>Não Foi possível Logar.</p><br/>
-        
-        <p>Tente Novamente</p><br/>
+<?php
+include 'header.php';
+?>
+<!--[if !IE]>
+<!-->
+<div id="loadingScreen">
+    <!-- if not IE, we show the loading screen -->
+    <div>
+        <img src="images/icons/ajax-loader.gif" alt=""/>
+        <br>Loading</div>
+</div>
+<!--<![endif]-->
+<img class="home-spot" src="images/background/spot-light.png" alt=""/>
+<img class="home-light" src="images/background/white-lights/IES-wide.png" alt=""/>
 
-	<a href="#" onclick="showBox()">Abrir Modal</a>
-	<div id="box" class="dialog">
-		<div>
+<div class="container page-wrapper">
 
-			<label>Login</label><br><br>
-		<form action="login.php" method="POST">
-			<label>Usuário: </label>
-			<input type="text"><br>
-			<label>Senha: </label>
-			<input type="text"><br>
-			<input type="submit" value="Logar">
-		</form>
-			
-			<a href="#" onclick="showBox()">fechar</a>
+    <!-- .post -->
+    <article id="post-7" class="post-7 page type-page status-publish hentry post">
 
-		</div>
+        <!-- .entry-header -->
+        <header class="entry-header">
 
-	</div>
-    </body>
-</html>
+            <div class="entry-meta"></div>
+        </header>
+
+        <!-- .entry-content -->
+        <div class="entry-content">
+            <div style="text-align: center">
+                <h1 style="color: #CF0F0F;">Error | 404</h1>
+            <h1>Página não encontrada!</h1>
+            <p>Acesse novamente nosso site!</p>
+            <a href="http://www.flavianobrega.com">Flávia Nobrega | Artista Plástica</a>
+            </div>
+        </div>
+
+        <!-- .entry-meta -->
+        <footer class="entry-meta"></footer>
+    </article>
+    <!-- /.post -->
+
+    <div class="pagination pagination-centered"></div>
+
+    <div class="comments"></div>
+    <!-- /.content -->
+
+</div>

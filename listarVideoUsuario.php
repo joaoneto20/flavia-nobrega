@@ -5,34 +5,33 @@ require 'menuUsuario.php';
 <hr>
 <div class="container-fluid">
     <div class="row-fluid">
-            <h3 style="text-align: center;">Relação de Vídeos Cadastrado</h3>
-            <table class="table table-hover table-bordered" style="max-width: 800px; margin-left: 20%;">
-                <tbody>
-                    <?php
-                    require 'conexao.php';
+        <h3 style="text-align: center;">Relação de Vídeos Cadastrado</h3>
+        <table class="table table-hover table-bordered" style="max-width: 800px; margin-left: 20%;">
+            <tbody>
+                <?php
+                require 'conexao.php';
 
-                    $query = "SELECT id, titulo, status FROM video WHERE id != '' and status ='1' ORDER BY id DESC";
+                $query = "SELECT id, titulo, status FROM video WHERE id != '' and status ='1' ORDER BY id DESC";
 
-                    $exequery = mysql_query($query) or die(mysql_error());
+                $exequery = mysql_query($query) or die(mysql_error());
 
-                    if (mysql_num_rows($exequery) <= 0) {
-                        echo "<script type='text/javascript'> 
+                if (mysql_num_rows($exequery) <= 0) {
+                    echo "<script type='text/javascript'> 
     alert('Tabela Vazia'); 
     </script>";
-                    } else {
+                } else {
 
-                        while ($res = mysql_fetch_assoc($exequery)) {
-                            echo '<tr>';
-                            echo '<td style="text-align:center;"><a href="verVideo.php?id=' . $res['id'] . '">' . HTMLSPECIALCHARS(mysql_real_escape_string($res['titulo'])) . '</a></td>';
-                            echo '</tr>';
-
-                        }
+                    while ($res = mysql_fetch_assoc($exequery)) {
+                        echo '<tr>';
+                        echo '<td style="text-align:center;"><a href="verVideo.php?id=' . $res['id'] . '">' . HTMLSPECIALCHARS(mysql_real_escape_string($res['titulo'])) . '</a></td>';
+                        echo '</tr>';
                     }
-                    ?>
-                </tbody>
-            </table>
+                }
+                ?>
+            </tbody>
+        </table>
     </div>
 </div>
 <?php
-require 'footerUsuario.php.php';
+require 'footerUsuario.php';
 ?>
