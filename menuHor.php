@@ -19,13 +19,13 @@
                 <div class="window" id="janela1">
                     <div>
                     <form action="login.php" method="POST">
-                        <label style="color: black;">Usuário: </label>
+                        <label style="color: white;">Usuário: </label>
                         <input type="text" name="nomeUsuario"><br>
-                        <label style="color: black">Senha: </label>
+                        <label style="color: white">Senha: </label>
                         <input type="password" name="senha"><br><br>
                         <input type="submit" value="Logar">
                     </form>
-                        <a href="#" class="fechar">X Fechar</a>
+                        <a href="#" class="fechar"><strong>X Fechar</strong></a>
                         
                     </div>
                 </div> 

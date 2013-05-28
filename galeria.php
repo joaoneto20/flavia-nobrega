@@ -30,7 +30,7 @@ include 'menuVert.php';
                 while ($dados = mysql_fetch_assoc($m)) {
 
                     echo '
-                        <div style="border-color: #CCCCCC #999999 #999999 #CCCCCC; border-style: solid;border-width: 1px; margin-left:10px; margin-bottom: 10px; width:180px; height: 100px; float: left; display: table;">
+                        <div style="border-color: #FFFFFF #999999 #FFFFFF #CCCCCC; border-style: solid;border-width: 2px; margin-left:10px; margin-bottom: 10px; width:180px; height: 100px; float: left; display: table;">
                             <a rel="prettyPhoto[pp_gal]" href="imagem-fotos/' . htmlspecialchars(mysql_real_escape_string($dados['nome'])) . '" title="Peças em Porcelana Fria" >
                                 <img src="imagem-fotos/' . htmlspecialchars(mysql_real_escape_string($dados['nome'])) . '" title="'. htmlspecialchars(mysql_real_escape_string($dados['titulo'])) . '" alt="Peças em porcelana" />
                             </a>

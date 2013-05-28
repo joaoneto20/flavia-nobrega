@@ -1,7 +1,7 @@
 body.custom-background {
 	background-attachment: scroll;
 	background-color: #ffffff;
-	background-image: url('../images/background/background2.jpg');
+	background-image: url('../images/background/background2.png');
 	background-position: top left;
 	/*background-repeat: repeat;*/
 }
@@ -49,11 +49,11 @@ ul.categories-menu a.cur-category:hover {
 }
 
 .bottom-line {
-	background-color:#3D2200 !important;
+	background-color:#e2e2e2 !important;
 }
 
 .category-shadow {
-	border-color:#3D2200 !important;
+	border-color:#e2e2e2 !important;
 }
 
 #showHideMenu {
@@ -123,7 +123,7 @@ ul li.active a {
 }
 
 .header-logo-link {
-	background-color:#3D2200 !important;
+	background-color:#85257f !important;
 }
 
 #cboxClose {

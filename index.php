@@ -21,32 +21,14 @@ include 'menuVert.php';
     <article id="post-57" class="post-57 page type-page status-publish hentry post">
         <!-- .entry-content -->
         <div class="entry-content">
-            <h2>
-                Flávia Nóbrega | Artista Plástica
+            <h2 style="color: #85257f; text-align: center">
+                Flávia Nóbrega | Artes em Porcelana
             </h2>
             <div class="slider-wrapper theme-default js-nivo-responsive">
                 <img class="slider-mask" src="images/gallery/shadow-homepage.png" alt=""/>
                 <div id="50a20f9942d18" class="nivoSlider">
-                    <a href="gallery_commercial.html">
-                        <img src="images/gallery_images/cat_commercial1.jpg" alt=""  title="Commercial photography"/>
-                    </a>
-                    <a href="gallery_art.html">
-                        <img src="images/gallery_images/cat_art1.jpg" alt=""  title="Art gallery"/>
-                    </a>
-                    <a href="gallery_architecture.html">
-                        <img src="images/gallery_images/cat_architecture1.jpg" alt=""  title="Architecture photography"/>
-                    </a>
-                    <a href="gallery_fashion.html">
-                        <img src="images/gallery_images/cat_fashion1.jpg" alt=""  title="Fashion photography"/>
-                    </a>
-                    <a href="gallery_still-life.html">
-                        <img src="images/gallery_images/cat_still1.jpg" alt=""  title="Still Life/Studio photography"/>
-                    </a>
-                    <a href="gallery_travel.html">
-                        <img src="images/gallery_images/cat_travel1.jpg" alt=""  title="Travel photography"/>
-                    </a>
-                    <a href="gallery_weddings.html">
-                        <img src="images/gallery_images/cat_wedding1.jpg" alt=""  title="Wedding photography"/>
+                    <a href="galeria.php">
+                        <img src="images/gallery_images/logo.jpg" alt="Flávia Nóbrega"/>
                     </a>
                 </div>
             </div>

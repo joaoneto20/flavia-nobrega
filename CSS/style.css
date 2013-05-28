@@ -2117,7 +2117,7 @@ Author URI: http://dev7studios.com
 input[type="submit"]
 {
     border:none;
-    background-color: #63712F;
+    background-color: lightblue;
     background-image: none;
     text-shadow: none;
     color:white;
@@ -3719,7 +3719,7 @@ body .gallery .gallery-caption {
     width:250px;
     height:200px;
     position:absolute;   
-    background: #B62325;
+    background: #C61B83;
     z-index:9900;
     padding:10px;
     border-radius:10px;
