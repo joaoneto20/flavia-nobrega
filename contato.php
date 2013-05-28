@@ -49,27 +49,27 @@ include 'menuVert.php';
                         </p>
                         <h3>Rede Social</h3>
                         <p>
-                            <a href="link here">
+                            <a href="https://www.facebook.com/flavia.nobrega.50?fref=ts" target="blank">
                                 <span class="social-wrap">
                                     <img class="social-icon social-facebook" src="images/icons/socials/social-facebook-small-white.png"/>
                                 </span>
                             </a>
-                            <a href="link here">
+                            <a href="#">
                                 <span class="social-wrap">
                                     <img class="social-icon social-flickr" src="images/icons/socials/social-flickr-small-white.png"/>
                                 </span>
                             </a>
-                            <a href="link here">
+                            <a href="#">
                                 <span class="social-wrap">
                                     <img class="social-icon social-twitter" src="images/icons/socials/social-twitter-small-white.png"/>
                                 </span>
                             </a>
-                            <a href="link here">
+                            <a href="#">
                                 <span class="social-wrap">
                                     <img class="social-icon social-stumble" src="images/icons/socials/social-stumble-small-white.png"/>
                                 </span>
                             </a>
-                            <a href="link here">
+                            <a href="#">
                                 <span class="social-wrap">
                                     <img class="social-icon social-rss" src="images/icons/socials/social-rss-small-white.png"/>
                                 </span>
