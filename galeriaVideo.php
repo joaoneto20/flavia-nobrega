@@ -33,7 +33,7 @@ require 'conexao.php';
                 </div>
                 <span class="gallery-video">
             <p>
-             '.$dados['endereco'].'
+             '.stripslashes($dados['endereco']).'
             </p>
                  </span>
        </div>';

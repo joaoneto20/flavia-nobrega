@@ -23,7 +23,7 @@
 		<link rel='stylesheet' id='theme-css'  href='CSS/style.css' type='text/css' media='all' />
 		<link rel='stylesheet' id='theme-css-custom'  href='CSS/color-theme.css' type='text/css' media='all' />
 		<link rel='stylesheet' id='nivo-slider-css'  href='external/nivo-slider/nivo-slider.css' type='text/css' media='all' />
-                <link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen" charset="utf-8" />
+                <link rel="stylesheet" href="CSS/prettyPhoto.css" type="text/css" media="screen" charset="utf-8" />
 
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 		<script type='text/javascript' src='js/site.js'></script>

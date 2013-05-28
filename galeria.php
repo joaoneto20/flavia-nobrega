@@ -3,6 +3,17 @@ include 'header.php';
 include 'menuHor.php';
 include 'menuVert.php';
 ?>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("a[rel^='prettyPhoto']").prettyPhoto({
+            animation_speed: 'normal',
+            slideshow: 4000,
+            autoplay_slideshow: true,
+            theme: 'pp_default',
+            social_tools: false
+        });
+    });
+</script>
 <!--[if !IE]>
 <!-->
 <div id="loadingScreen">
@@ -42,17 +53,6 @@ include 'menuVert.php';
     </div>
     <div class="clearfix"></div>
 </div>
-<script type="text/javascript">
-    $(document).ready(function() {
-        $("a[rel^='prettyPhoto']").prettyPhoto({
-            animation_speed: 'normal',
-            slideshow: 4000,
-            autoplay_slideshow: true,
-            theme: 'pp_default',
-            social_tools: false
-        });
-    });
-</script>
 <?php
 include 'footer.php';
 ?>

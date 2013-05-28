@@ -21,7 +21,7 @@ require 'menuUsuario.php';
                     echo '<div class="img-polaroid"';
                     echo htmlspecialchars(mysql_real_escape_string($res['titulo']));
                     echo '<br>';
-                    echo $res['endereco'];
+                    echo stripslashes($res['endereco']);
                     echo '</div>';
                     echo '<a href="listarVideoUsuario.php" class="btn btn-info" style="text-align: center;">Voltar</a>';
                     //echo '<iframe width="425" height="350" src="http://www.youtube.com/embed/' . $res['endereco'] . '" frameborder="0" allowfullscreen></iframe>';
