@@ -27,9 +27,9 @@ include 'header.php';
         <!-- .entry-content -->
         <div class="entry-content">
             <div style="text-align: center">
-                <h1 style="color: #CF0F0F;">Error | 404</h1>
-            <h1>Página não encontrada!</h1>
-            <p>Acesse novamente nosso site!</p>
+                <h1 style="color: #CF0F0F;">Atenção!</h1>
+            <h1>Nossa página está sendo atualizada</h1>
+            <p>Em breve estamos disponibilizando o acesso!</p>
             <a href="http://www.flavianobrega.com">Flávia Nobrega | Artista Plástica</a>
             </div>
         </div>

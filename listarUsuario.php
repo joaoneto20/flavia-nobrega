@@ -6,10 +6,10 @@ require 'conexao.php';
 <hr>
 <div class="container-fluid">
     <div class="row-fluid">
-
+        <div class="span9">
             <h3 style="text-align: center;">Relação de usuários cadastrado</h3>
             
-            <table class="table table-hover table-bordered" style="max-width: 800px; margin-left: 15%;">
+            <table class="table table-hover table-bordered" style="max-width: 800px;">
                 <tbody>
                     <tr>
                         <th style="text-align: left;">Nome</th>
@@ -66,6 +66,7 @@ require 'conexao.php';
              <div class="pagination pagination-centered">
                 <?php include 'paginacao.php'; ?>
             </div>
+        </div>
     </div>
 </div>
 <?php

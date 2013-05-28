@@ -25,7 +25,7 @@ require 'conexao.php';
                 echo '<label>Título:</label>';
                 echo '<input class="input-large" type="text" name="titulo" value="' . $res['titulo'] . '"><br>';
                 echo '<label>Link do vídeo:</label>';
-                echo '<input class="input-large" type="text" name="endereco" value="' . $res['endereco'] . '"><br>';
+                echo '<input class="input-large" type="text" name="endereco" value="' . htmlspecialchars($res['endereco']) . '"><br>';
                 echo '<label>Descrição:</label>';
                 echo '<textarea cols="100" rows="5" name="descricao" > ' . $res['descricao'] . ' </textarea>';
                     if ($res['status']==1) {
@@ -51,7 +51,7 @@ require 'conexao.php';
                 //atualizar no banco ############
                 if (isset($_POST['enviar'])) {
                     $titulo = $_POST["titulo"];
-                    $endereco = $_POST["endereco"];
+                    $endereco = addslashes($_POST["endereco"]);
                     $descricao = $_POST["descricao"];
                     $status = $_POST["status"];
 

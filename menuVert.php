@@ -9,17 +9,7 @@
             </li>
             <li>
                 <span class="category-shadow">
-                    <a href="#">Comercial</a>
-                </span>
-            </li>
-            <li>
-                <span class="category-shadow">
-                    <a href="cadastro.php">Cadastro</a>
-                </span>
-            </li>
-            <li>
-                <span class="category-shadow">
-                    <a href="#">Galeria de Vídeo</a>
+                    <a href="galeriaVideo.php">Galeria de Vídeo</a>
                 </span>
             </li>
         </ul>

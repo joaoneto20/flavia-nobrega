@@ -20,7 +20,7 @@ require 'menuAdm.php';
                 try {
                     $res = mysql_fetch_assoc($exeqr);
                     echo '<div class="img-polaroid"';
-                    echo $res['titulo'];
+                    echo htmlspecialchars(mysql_real_escape_string($res['titulo']));
                     echo '<br>';
                     echo $res['endereco'];
                     echo '</div>';

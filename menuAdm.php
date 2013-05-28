@@ -33,6 +33,14 @@
                         </li>
                         <li class="divider-vertical"></li>
                         <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Vídeo Promoção <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="cadVideoPromo.php"><i class="icon-facetime-video"></i> Cadastrar Vídeo</a></li>
+                                <li><a href="listarVideosPromo.php"><i class="icon-th-list"></i> Lista de Vídeo</a></li>
+                            </ul>
+                        </li>
+                        <li class="divider-vertical"></li>
+                        <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Usuário <b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li><a href="cadastraUsuario.php"><i class="icon-user"></i> Cadastrar Usuário</a></li>

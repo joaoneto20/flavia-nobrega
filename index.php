@@ -3,7 +3,6 @@ include 'header.php';
 include 'menuHor.php';
 include 'menuVert.php';
 ?>
-
 <!--[if !IE]>
 <!-->
 <div id="loadingScreen">
@@ -19,34 +18,42 @@ include 'menuVert.php';
 <div class="container page-wrapper">
 
     <!-- .post -->
-    <article id="post-7" class="post-7 page type-page status-publish hentry post">
-
-        <!-- .entry-header -->
-        <header class="entry-header">
-
-            <div class="entry-meta"></div>
-        </header>
-
+    <article id="post-57" class="post-57 page type-page status-publish hentry post">
         <!-- .entry-content -->
         <div class="entry-content">
-
+            <h2>
+                Flávia Nóbrega | Artista Plástica
+            </h2>
             <div class="slider-wrapper theme-default js-nivo-responsive">
                 <img class="slider-mask" src="images/gallery/shadow-homepage.png" alt=""/>
                 <div id="50a20f9942d18" class="nivoSlider">
-                    <a href="#">
-                        <img src="images/gallery_images/cat_art1.jpg" alt=""  title="Commercial photography"/>
+                    <a href="gallery_commercial.html">
+                        <img src="images/gallery_images/cat_commercial1.jpg" alt=""  title="Commercial photography"/>
                     </a>
                     <a href="gallery_art.html">
-                        <img src="images/gallery_images/cat_commercial1.jpg" alt=""  title="Art gallery"/>
+                        <img src="images/gallery_images/cat_art1.jpg" alt=""  title="Art gallery"/>
                     </a>
                     <a href="gallery_architecture.html">
-                        <img src="images/gallery_images/cat_travel1.jpg" alt=""  title="Architecture photography"/>
+                        <img src="images/gallery_images/cat_architecture1.jpg" alt=""  title="Architecture photography"/>
+                    </a>
+                    <a href="gallery_fashion.html">
+                        <img src="images/gallery_images/cat_fashion1.jpg" alt=""  title="Fashion photography"/>
+                    </a>
+                    <a href="gallery_still-life.html">
+                        <img src="images/gallery_images/cat_still1.jpg" alt=""  title="Still Life/Studio photography"/>
+                    </a>
+                    <a href="gallery_travel.html">
+                        <img src="images/gallery_images/cat_travel1.jpg" alt=""  title="Travel photography"/>
+                    </a>
+                    <a href="gallery_weddings.html">
+                        <img src="images/gallery_images/cat_wedding1.jpg" alt=""  title="Wedding photography"/>
                     </a>
                 </div>
             </div>
 
             <script>
-                jQuery(document).ready(function($) {$('#50a20f9942d18').nivoSlider({
+                jQuery(document).ready(function($) {
+                    $('#50a20f9942d18').nivoSlider({
                         effect: 'fade', // Specify sets like: 'fold,fade,sliceDown'
                         animSpeed: 200, // Slide transition speed
                         pauseTime: 4000, // How long each slide will show
@@ -66,10 +73,8 @@ include 'menuVert.php';
                         nextText: 'Next'});
                 });
             </script>
-        </div>
 
-        <!-- .entry-meta -->
-        <footer class="entry-meta"></footer>
+        </div>
     </article>
     <!-- /.post -->
 
@@ -79,4 +84,4 @@ include 'menuVert.php';
     <!-- /.content -->
 
 </div>
-<?php include 'footer.php' ?>
+<?php include 'footer.php'; ?>

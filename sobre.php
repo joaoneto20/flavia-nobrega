@@ -31,7 +31,7 @@ include 'menuVert.php';
             <h2>Um pouco de mim e onde tudo começou...</h2>
             
             <p style="text-align: justify;">
-                <img style="float: left;display: block;" src="images/gallery_images/flavia.jpg"/>
+                <img style="float: left;display: block;" width="300" height="300" title="Flávia Nóbrega" src="images/gallery_images/flavia.jpg"/>
                 Sou nutricionista com especialização em Nutrição Clínica pelo Hospital Beneficência Portuguesa de São Paulo.
                 Sempre gostei de artes e em 2000 comecei a fazer curso de modelagem em porcelana fria. Seis meses depois já estava
                 publicando meus trabalhos em revistas da Editora Online e depois pela Editora Minuano. Em 2004 surgiu a revista de personagens 
@@ -40,14 +40,14 @@ include 'menuVert.php';
                 em minha cidade alunos de várias cidades de dentro e foras do país.
             </p>
             <p>&nbsp;</p>
-            <div style="margin-top: 35%;">
+            <div style="margin-top: 25%;">
             <h2>Galeria de fotos</h2>
             <div class="row row-spacer ">
                 <div class="span6 ">
                     <div class="span-space" >
                         <p style="text-align: center;">
                             <a href="#">
-                                <img class="size-full wp-image-217 aligncenter" title="hoto_about1" src="images/gallery_images/hoto_about1.jpg" alt="" width="940" height="460" />
+                                <img class="size-full wp-image-217 aligncenter" title="Galeria" src="images/gallery_images/galeria.jpeg" alt="" width="940" height="460" />
                             </a>
                         </p>
                     </div>
@@ -56,9 +56,7 @@ include 'menuVert.php';
                     <div class="span-space" >
                         <h3>Galeria</h3>
                         <p>
-                            We are tagDiv – an online agency focusing on <strong>website design</strong>
-                            internet marketing and increasing your bottom line. We combine focus and strategy in <strong>web technology</strong>
-                            to provide with the tools to grow and make the new digital landscape.
+                            Para conhecer todos os projetos recentes, fotos das aulas  e tudo que você pode aprender no nosso curso, acesse nossa <strong>Galeria de Fotos</strong> através do link abaixo.
                         </p>
                         <p>
                             <a class="btn btn-large " href="galeria.php" style="background-color:#63712f; ">Ver Galeria</a>
