@@ -19,9 +19,9 @@ require 'menuAdm.php';
                 
                 try {
                     $res = mysql_fetch_assoc($exeqr);
-                    echo '<div class="img-polaroid"';
                     echo htmlspecialchars(mysql_real_escape_string($res['titulo']));
                     echo '<br>';
+                    echo '<div>';
                     echo stripslashes($res['endereco']);
                     echo '</div>';
                     echo '<a href="listarVideosPromo.php" class="btn btn-info" style="text-align: center;">Voltar</a>';
